@@ -48,8 +48,9 @@
         self.textView = UITextView.alloc.init;
         self.textView.font = KLAutoFont(16.0);
         self.textView.returnKeyType = UIReturnKeySend;
-        self.textView.layer.masksToBounds = YES;
+        self.textView.enablesReturnKeyAutomatically = YES;
         self.textView.layer.cornerRadius = 3;
+        self.textView.layer.masksToBounds = YES;
         self.textView.textContainerInset = UIEdgeInsetsMake(self.textView.textContainerInset.top, 5, self.textView.textContainerInset.bottom, 5);
         self.textView.delegate = self;
         [self addSubview:self.textView];
