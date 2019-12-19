@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'KLKeyboard_Example' do
+  pod 'KLKeyboard', :path => '../'
+
+  target 'KLKeyboard_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
