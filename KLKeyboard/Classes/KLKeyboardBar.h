@@ -1,18 +1,18 @@
 //
-//  KLKeyboard.h
-//  KLKeyboard
+//  KLKeyboardBar.h
+//  KLKeyboardBar
 //
 //  Created by Logic on 2019/12/19.
 //
 
 #import <UIKit/UIKit.h>
-#import "KLKeyboardItem.h"
+#import "KLKeyboardBarItem.h"
 
-@interface KLKeyboard : UIView
+@interface KLKeyboardBar : UIView
 
 @property (strong, nonatomic) void (^sendTextCompletion)(NSString *text);
 
-- (void)addKeyboardItemWithType:(KLKeyboardItemType)type Image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage callBack:(void (^)(KLKeyboardItem *item))callBack;
+- (void)addKeyboardItemWithType:(KLKeyboardBarItemType)type Image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage callBack:(void (^)(KLKeyboardBarItem *item))callBack;
 
 // 输入框注册响应者
 - (void)inputViewBecomeFirstResponder;

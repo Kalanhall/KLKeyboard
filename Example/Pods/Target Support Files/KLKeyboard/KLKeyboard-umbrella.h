@@ -10,8 +10,10 @@
 #endif
 #endif
 
-#import "KLKeyboard.h"
-#import "KLKeyboardItem.h"
+#import "KLBaseKeyboard.h"
+#import "KLEmojiKeyboard.h"
+#import "KLKeyboardBar.h"
+#import "KLKeyboardBarItem.h"
 
 FOUNDATION_EXPORT double KLKeyboardVersionNumber;
 FOUNDATION_EXPORT const unsigned char KLKeyboardVersionString[];

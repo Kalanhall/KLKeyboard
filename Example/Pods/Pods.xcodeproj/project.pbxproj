@@ -7,55 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0450C074D3032C1FB553CBECE677917C /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A1174350FE8217B934F2D6216F5A2D9 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04DD59E319EFBC447E7D2C2A525BEE24 /* NSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCC4D8573C858125F328408991429CA /* NSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1053B66EE77081BF6245889839117BF4 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 81ABCD59957235172313B71ECC7F8ACC /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		136A025F7E033EE0843DB07F234F3761 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E3B77DB2EAC328282D1183DA480623 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0578AE5DC774ACA51FAB85A973EB5EEC /* KLKeyboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A7A3DAA0C7491A1A4F62EE60DC9982 /* KLKeyboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19011F648B9D0E896293031855FF8555 /* NSObject+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 36197BFF4F993C6704A8D3D0550F3337 /* NSObject+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		210F9F88721BB50AB42F8A748FF9A890 /* Pods-KLKeyboard_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 020901B25D51C1FE2F4B242937B55B90 /* Pods-KLKeyboard_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2838F2A249C93D2C0E7993176C378A3C /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A14DD5403D2DD8BD47F104CC9018147 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A6531733FE95376D47E67BE611133F7 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2572A8EAC92B14033952B71FDE9D56 /* ViewController+MASAdditions.m */; };
 		2AF232EA84E264D8A510F5C816667DE7 /* NSRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = CF50E5B2FCA3A6C70213CAB92ED45EFA /* NSRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E5E7EE78FEFE7BD648281F0F671BEBC /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE6ACB0BB2FFEA0F792D41F9380F8E /* MASViewAttribute.m */; };
+		2F35F1F8549978646FAAD96F95272EC0 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2572A8EAC92B14033952B71FDE9D56 /* ViewController+MASAdditions.m */; };
 		31E8B9F678F1732C4403D6C9859DE6C1 /* UIDevice+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F191AAF64E5CF4FC40CD8EFAB9070 /* UIDevice+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33F17544DE21AF4BD45722C1039C534B /* KLKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B2D890E192D6F175F1972524898850 /* KLKeyboard.m */; };
+		326FE07B8CF15F38D9923C8E5FC603D1 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE3F4DE7C931AA9F5290EC8F9080D90 /* Masonry.framework */; };
 		35AC4CD08514EB14515BC5229C4F0B24 /* Pods-KLKeyboard_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A8927BD632E6C7B1D5D1FDA53283C /* Pods-KLKeyboard_Example-dummy.m */; };
-		393F3F856AA4949446991689D4423AEC /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D40C9BFC9D8F6891BB4C3DE3946A9B /* View+MASAdditions.m */; };
+		36071DFBB9B6C4D25F8A5A1E4704177E /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = EF26CE12440E1370D0300EA24907F6B8 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3764AB51A53D72CDDFC3E59F0B5CC5C8 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3471740AFC30BAD6D60E2D9345D085B2 /* MASViewConstraint.m */; };
+		384A4636FF0188F0C943C6C0DE0D9499 /* KLEmojiKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E0ED2E41D65154EC234C0DEDE38A4 /* KLEmojiKeyboard.m */; };
+		3984B472F75A4668E5407496B10F592B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0BADB0B5E2254028F1569FFA040ECE /* Foundation.framework */; };
+		40BD6C00C1D61A3A8E456E0E0DAAD2F6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C6155B6DF42C1E2ADFA102F19C78BA /* MASConstraintMaker.m */; };
 		4199D05F18CC2B09B8FE0B6B3C6BF307 /* NSString+KLValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2C490B88DD77145F07F159520B3802 /* NSString+KLValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4AB93FA704BBF1570BB66306E5736D25 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEDADDDBF7FEF3E4FA5FD506EC8E869 /* MASCompositeConstraint.m */; };
-		4C5D188476E76DA6C3A8DE22FDE8BEDF /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FCBA57E93489B419AA94D3296B5BD5 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AB8A41F23E60E734051A2A762149296 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A14DD5403D2DD8BD47F104CC9018147 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D2166BDC6967A5C49207B33C1F441EF /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8AE17B2CC0B6C16FF577BD4AE3131 /* Masonry-dummy.m */; };
 		4E9770FA180052278A0405292FC83533 /* NSObject+KLTouchFaceID.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E76A7611B798E89B8E916E42BD4673 /* NSObject+KLTouchFaceID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FFCD4F6A685DCB2348CB59F192CA14A /* KLKeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 956FB713D41F652B3D1C022DF11B9E2A /* KLKeyboardBar.m */; };
 		5086034B9BA71C8108F8706067FB2FB0 /* NSDate+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE122F0B9ABC4F67FD1119401BCF2BF /* NSDate+KLExtension.m */; };
 		52A17739D0465FA360D0ED1BD7F01794 /* Pods-KLKeyboard_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 557B2B40871EA01C51816294CA991D2A /* Pods-KLKeyboard_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D8D3077B9243EC7D489F0ADBE6F2A16 /* KLKeyboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29F524BCC411FDC777332E58B9264192 /* KLKeyboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55F95C89CBC8E131C839541EDE05B059 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7476D92AE040E74D8773708FD91B3A /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		5E2BA8D6BC4E66AFF1E2BBF930F1E382 /* NSString+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 303D101A555342BB3D6C5503F899A891 /* NSString+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		600484BB0F92BD75428FEC5F45E4E7B6 /* UIColor+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0690758989C2FDA13E81D67C3C21F7 /* UIColor+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		609CCED789B39D3666480020002C3D42 /* KLKeyboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C931150C7ADC9E2A3DD64C28776CE54B /* KLKeyboard-dummy.m */; };
+		6020D2D59AC3837775C4ADFAF0F99C4D /* KLKeyboardBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD11E996BC633A129FC260E0830E7A4 /* KLKeyboardBarItem.m */; };
 		63FADFFBDB29F6A885E0BEE6745EE96E /* UIViewController+KLLogExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ECBB66BBA0C28841AB1A6B7B86E5B00 /* UIViewController+KLLogExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64186CFEEB10F97AC4FB5C75BF6582B4 /* UICollectionView+KLCellAutoSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC7A433B90EEC59A6E99F932F62487B /* UICollectionView+KLCellAutoSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64E1BE54F5B7B0C6BB49AE5B5088AC0C /* UIView+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2A021E113ACA7F6B897C2E8F0660F6 /* UIView+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65AEF2F9ED4641143484EA93B58DE9D1 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 013341DF5D8A3BCFAA29FF843D160843 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67DF512C941DF9BE35DEBAECAC8FF4B0 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2F87C1A4152F3F6E484A8638D55D4 /* MASConstraint.m */; };
+		65A7F8685558262770AB387B5967AB14 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2F87C1A4152F3F6E484A8638D55D4 /* MASConstraint.m */; };
 		6BFD39304B9D682ADB321DAFD0940477 /* UICollectionView+KLCellAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BFA4836E4EB02D0DB6995CE4146DE /* UICollectionView+KLCellAutoSize.m */; };
-		6CAA680B00EFF321535B2F1B642ABE91 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F0ACE088FC85727AEC55D5C528DBE0 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FCFD2C38905135F92B17CC36BD50CE4 /* KLCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F434C4CB07C1B2D0BF4AECB98A42CE /* KLCategory.framework */; };
+		6EC191DDB3343C808D47256206C1042E /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A1174350FE8217B934F2D6216F5A2D9 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7006F6A2285DB6E3163BB55F03F4FA2E /* NSMutableParagraphStyle+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAED33CB0B131E6B5328B664B539CEB /* NSMutableParagraphStyle+KLExtension.m */; };
-		73EFD52BF06C4CB019998A6ED10AA7B8 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F6CA2D318A41F773C6D5336176EF53 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		741C383A09A63CF4817970D7CB248521 /* KLKeyboardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2046B9C3387F0E4531D0C859D71132 /* KLKeyboardItem.m */; };
-		7E5BB63D129A3DF00ACB77AE0DF8FBB1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7476D92AE040E74D8773708FD91B3A /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		7B401172501F192BE59C9FA6A9DE0B93 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 81ABCD59957235172313B71ECC7F8ACC /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BB0B1CBACAB7C9917713BC02B5B686B /* KLKeyboardBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E81A6DE28AA0852D40CD715639D128C /* KLKeyboardBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F21FAF709FD21DF26C4AFCA9972439B /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 56F7426474B863079BCC35E81CBBC4CD /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83373C17B4DD0861F1F0FAF44F20E2E5 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 974C4504230BF7220F9F059E6A028B86 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84E2F0DED7E58E93F4D87C22D0FD708F /* NSMutableParagraphStyle+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B387008972C3D15350D4F2B0E6C5F15 /* NSMutableParagraphStyle+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		863A7980B592C293D008C311390E4553 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7B2A3DD8DA3AFC25E9CBC57675BE4F /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87F1382BC29ACBF54CC58AD52EAB228D /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF575C77412FA09B2026BCBA9570B1A /* MASLayoutConstraint.m */; };
-		99948369A847962179F76FED79307D03 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C6155B6DF42C1E2ADFA102F19C78BA /* MASConstraintMaker.m */; };
-		A347F9E97C14019E1823A46240C1562C /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66746B834C2EB96ED5E93B3416F45B /* NSArray+MASAdditions.m */; };
-		A6515488D6F06FA61BBADB4B0F4C0736 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5967A717527AF5FC89AFA383D833719D /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8787805294C3EB666A6CE0931BF7B07B /* KLBaseKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 82CCD0AA496C6B794E69C7D342E5C183 /* KLBaseKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1F8C303C2A1166C0ECED8379466BDE1 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 95B536285D81C663A245CD2C5BCC4CEB /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A449628386FFEFBB4CD1004DE1147E94 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5967A717527AF5FC89AFA383D833719D /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A71708F158EBF0901A7813C8856EF9CA /* KLCategory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B65EFADFFA916A323EB4EEC9A63A24 /* KLCategory-dummy.m */; };
-		AA688816C07FF9AC92E33B79C4046567 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB816969A3E33417782251153BB81D7 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF9F1FF61F709890D6E632C82C0FF0B7 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 974C4504230BF7220F9F059E6A028B86 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B13D66B7A7B5E008ED3D1A194DAA167E /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 95B536285D81C663A245CD2C5BCC4CEB /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABD35DA2CF2396D75BBAEEA74F21BF18 /* KLKeyboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF496D0935BA83FB31E83970DCAA419 /* KLKeyboard-dummy.m */; };
+		B028956EEAEB59BBF8F034DD91A4B33D /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D40C9BFC9D8F6891BB4C3DE3946A9B /* View+MASAdditions.m */; };
+		B313D8EE0FDFFFEF44ACA715D0B8EE48 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E3B77DB2EAC328282D1183DA480623 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B326A249191F41034C64CF1ABB8F0B18 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FCBA57E93489B419AA94D3296B5BD5 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35D8A971AD6FE6E856862198CA95587 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0BADB0B5E2254028F1569FFA040ECE /* Foundation.framework */; };
+		B52C1D845ACBC57BEA4296932452251B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0BADB0B5E2254028F1569FFA040ECE /* Foundation.framework */; };
+		B59ED1836533319BDF3B751580949373 /* KLBaseKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CCFD845F3F0C7EFC7D96DE603F6CF1 /* KLBaseKeyboard.m */; };
 		B6A08F19BDD29DBFD263375C1271AF7F /* UIImage+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7596B4BA2EF9A833C00CB955B4694284 /* UIImage+KLExtension.m */; };
-		B70AF25DD7273357FE8E56A4A37C7FEC /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8AE17B2CC0B6C16FF577BD4AE3131 /* Masonry-dummy.m */; };
-		BD6D8F5FEF96003544C3E921ACDA2C7A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBA2D62D03F7D378BC1060982A04842 /* UIKit.framework */; };
+		B756E69BAA8A0963EDB0A8E65DEE75AD /* KLEmojiKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = F9156541109AE2FA1268201836669DE7 /* KLEmojiKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7D6141DD39412EC9BC91251A4272329 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF575C77412FA09B2026BCBA9570B1A /* MASLayoutConstraint.m */; };
 		BDBEE91869486FD93DDBCA696F160ABA /* UILabel+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 177D9AA6CB5F1294E8CAEA6B69DC4EAB /* UILabel+KLExtension.m */; };
 		BDC75E966483D4664424E0C9E98B26B5 /* UIImage+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F32ED0873E16EDF8AFCF67881A15B5 /* UIImage+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEE83983AA507204EBDC1B5636BB232B /* UIDevice+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 00235004A28B960E41E4FAB7B9BA63E6 /* UIDevice+KLExtension.m */; };
@@ -66,28 +69,29 @@
 		C625A0009C3F1382AB9C6BE524CB32D8 /* NSString+KLValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD2DA6D6C82A10CBF9EA532B092809 /* NSString+KLValue.m */; };
 		C6D41141665C8CC7E2B8079A133D147D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0BADB0B5E2254028F1569FFA040ECE /* Foundation.framework */; };
 		CCFB696038BD6D32DCB1C149D9B56B36 /* NSObject+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F590A646B15AFD549674A7F2D09556AD /* NSObject+KLExtension.m */; };
-		D1571FBE0FDD992B58E6B522965AE70A /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 56F7426474B863079BCC35E81CBBC4CD /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1492C84F0B4940423C9F72CDB57B286 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBA2D62D03F7D378BC1060982A04842 /* UIKit.framework */; };
 		D18856378516EA079DD5F6E4ED6E62FF /* NSString+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9690228040F5C6198C086C911B8EF /* NSString+KLExtension.m */; };
-		D273BE752DCD9229DE4DBD64D76EABFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0BADB0B5E2254028F1569FFA040ECE /* Foundation.framework */; };
-		D3A576EB50B529D8580CAD46C2C55145 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE6ACB0BB2FFEA0F792D41F9380F8E /* MASViewAttribute.m */; };
-		D814852B763573FB11B20322FFB6302E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 31EB3CEA8B363BC1A62815308E1CEA24 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8434BBA90C0B17FFA654F74100BEBD2 /* KLKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C03440646398E9BEFFED31841BEC2E /* KLKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3A831F84AF3F2C9310F4590C4F08771 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 013341DF5D8A3BCFAA29FF843D160843 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D51923F0BF79E8F1AFD901D898ED03CC /* KLKeyboardBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C686FF5959068C0C124F34B60539998 /* KLKeyboardBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8D33881AE64F3CBD3221BC159451C81 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEDADDDBF7FEF3E4FA5FD506EC8E869 /* MASCompositeConstraint.m */; };
 		DA6FFEF175A4682B756304A66A268018 /* UIViewController+KLLogExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF1D2A87FA27453861C67A6519F78 /* UIViewController+KLLogExtension.m */; };
-		DBC93F6EA732A426F16D26DD4F4D5BC7 /* KLKeyboardItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A8E3B229FDF3D2F95DBBDAE725FC21 /* KLKeyboardItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA812BBE02940D731D3DA977FD698EB /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE3F4DE7C931AA9F5290EC8F9080D90 /* Masonry.framework */; };
+		DFD6C495AFF434FB0AB062C0B981F281 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB816969A3E33417782251153BB81D7 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E371F504261BF52E180BF942C87D7A28 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7B2A3DD8DA3AFC25E9CBC57675BE4F /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E49330EE276A98A89AACAE72CD70E17E /* KLCategory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 147131A5540332E00A266D1054AD4BE8 /* KLCategory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E60B6D7647D6E7AE84E87ABB34E4A52C /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = EF26CE12440E1370D0300EA24907F6B8 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E80A9405905772B8E7D7A295B380C9B8 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3471740AFC30BAD6D60E2D9345D085B2 /* MASViewConstraint.m */; };
+		EC8D044E90AA286AA8185E25B570623F /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66746B834C2EB96ED5E93B3416F45B /* NSArray+MASAdditions.m */; };
+		EDB82EE98422DD992C0718DE4956B9E3 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 31EB3CEA8B363BC1A62815308E1CEA24 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B0B8A62832E2474E74A50037B9DD3 /* KLCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F434C4CB07C1B2D0BF4AECB98A42CE /* KLCategory.framework */; };
 		F9EDE1AF8230543DAAA4330C0A87C1D1 /* UIButton+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3451DA2ECC98033BF3B1A6AC8953430E /* UIButton+KLExtension.m */; };
 		FAFC57FEB9B99D4CFC81A8FE861E8218 /* UILabel+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = B365DAE7FC14D972AAFC5173433091D8 /* UILabel+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD296A044E4CF5C122353EEBB2D8A389 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0BADB0B5E2254028F1569FFA040ECE /* Foundation.framework */; };
+		FE5404587DBEDAF97C583CA3A5079B0D /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F0ACE088FC85727AEC55D5C528DBE0 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEBEA0C10C3325CD719037D4DEE88C2A /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F6CA2D318A41F773C6D5336176EF53 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEDFE6A879192909214D22EFDAC01E03 /* UIView+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE4792E383E30E50B43AEB23FF3D05 /* UIView+KLExtension.m */; };
 		FEEE68E133D529252479B9C49866E1E5 /* UIButton+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 414F0FF6D92BA734DBF865D60CCC5440 /* UIButton+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF2F4773A28332225C062C510CEFC1B3 /* NSObject+KLTouchFaceID.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1C0FF9719F56F90505EB8CD80D4E87 /* NSObject+KLTouchFaceID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		235FF8DEA0118AE9C68EE815369EF214 /* PBXContainerItemProxy */ = {
+		280AF5A9613888DB18849B9CEF054655 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -115,7 +119,7 @@
 			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
 			remoteInfo = Masonry;
 		};
-		AC01DB0EBD96F76D782B42EC7A2CCDEE /* PBXContainerItemProxy */ = {
+		D39633F3758E3B4F2B3C8CA646EE0440 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -133,8 +137,11 @@
 
 /* Begin PBXFileReference section */
 		00235004A28B960E41E4FAB7B9BA63E6 /* UIDevice+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIDevice+KLExtension.m"; sourceTree = "<group>"; };
+		00723F97CC57AAA803DC71003D179DDB /* KLKeyboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLKeyboard.modulemap; sourceTree = "<group>"; };
 		013341DF5D8A3BCFAA29FF843D160843 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		02069E480BDBEDA9784C792DECEE7AE0 /* KLKeyboard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLKeyboard-Info.plist"; sourceTree = "<group>"; };
 		020901B25D51C1FE2F4B242937B55B90 /* Pods-KLKeyboard_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KLKeyboard_Tests-umbrella.h"; sourceTree = "<group>"; };
+		05DFE9C08773C1BA6F29BF5B2B58387C /* KLKeyboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLKeyboard.xcconfig; sourceTree = "<group>"; };
 		08C7F3B944D0FFA8237339054A0DA445 /* Pods-KLKeyboard_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLKeyboard_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		0AC7A433B90EEC59A6E99F932F62487B /* UICollectionView+KLCellAutoSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+KLCellAutoSize.h"; path = "KLCategory/Classes/UIKit/UICollectionView+KLCellAutoSize.h"; sourceTree = "<group>"; };
 		0D2572A8EAC92B14033952B71FDE9D56 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
@@ -143,24 +150,25 @@
 		13DE97A24DB1E7A6CC05AFD71EE4C722 /* Pods-KLKeyboard_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLKeyboard_Example-Info.plist"; sourceTree = "<group>"; };
 		13E80A2FF6C1B9C9A33C58B4E3DCE6C5 /* Pods-KLKeyboard_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KLKeyboard_Tests-dummy.m"; sourceTree = "<group>"; };
 		147131A5540332E00A266D1054AD4BE8 /* KLCategory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-umbrella.h"; sourceTree = "<group>"; };
-		14B2D890E192D6F175F1972524898850 /* KLKeyboard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLKeyboard.m; path = KLKeyboard/Classes/KLKeyboard.m; sourceTree = "<group>"; };
+		15A7A3DAA0C7491A1A4F62EE60DC9982 /* KLKeyboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLKeyboard-umbrella.h"; sourceTree = "<group>"; };
 		177D9AA6CB5F1294E8CAEA6B69DC4EAB /* UILabel+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+KLExtension.m"; path = "KLCategory/Classes/UIKit/UILabel+KLExtension.m"; sourceTree = "<group>"; };
 		1B3C2AC5BA38027807E585A6ED58A777 /* UIColor+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIColor+KLExtension.m"; sourceTree = "<group>"; };
+		1FF1BF6E6714FF84F30D9F1377F85904 /* KLKeyboard.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KLKeyboard.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EEEF54685B81CD0666420346BD1517 /* KLCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KLCategory.framework; path = KLCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		230BFA4836E4EB02D0DB6995CE4146DE /* UICollectionView+KLCellAutoSize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+KLCellAutoSize.m"; path = "KLCategory/Classes/UIKit/UICollectionView+KLCellAutoSize.m"; sourceTree = "<group>"; };
-		255D531D24054D5D25BC26AF52CA8517 /* KLKeyboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLKeyboard.xcconfig; sourceTree = "<group>"; };
 		27CE6ACB0BB2FFEA0F792D41F9380F8E /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		29F524BCC411FDC777332E58B9264192 /* KLKeyboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLKeyboard-umbrella.h"; sourceTree = "<group>"; };
+		28FF61E9154474400227DC43DD5943A4 /* KLKeyboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLKeyboard-prefix.pch"; sourceTree = "<group>"; };
 		2B2C490B88DD77145F07F159520B3802 /* NSString+KLValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+KLValue.h"; path = "KLCategory/Classes/Foundation/NSString+KLValue.h"; sourceTree = "<group>"; };
 		2DFE4792E383E30E50B43AEB23FF3D05 /* UIView+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIView+KLExtension.m"; sourceTree = "<group>"; };
+		2EF496D0935BA83FB31E83970DCAA419 /* KLKeyboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLKeyboard-dummy.m"; sourceTree = "<group>"; };
 		2FB816969A3E33417782251153BB81D7 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		301CBC279D57B6FF9F8EBCDCA84DDABC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		303D101A555342BB3D6C5503F899A891 /* NSString+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSString+KLExtension.h"; sourceTree = "<group>"; };
 		31EB3CEA8B363BC1A62815308E1CEA24 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		32C03440646398E9BEFFED31841BEC2E /* KLKeyboard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLKeyboard.h; path = KLKeyboard/Classes/KLKeyboard.h; sourceTree = "<group>"; };
+		322E0ED2E41D65154EC234C0DEDE38A4 /* KLEmojiKeyboard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLEmojiKeyboard.m; path = KLKeyboard/Classes/KLEmojiKeyboard.m; sourceTree = "<group>"; };
 		3451DA2ECC98033BF3B1A6AC8953430E /* UIButton+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIButton+KLExtension.m"; sourceTree = "<group>"; };
 		3471740AFC30BAD6D60E2D9345D085B2 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		35CCFD845F3F0C7EFC7D96DE603F6CF1 /* KLBaseKeyboard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLBaseKeyboard.m; path = KLKeyboard/Classes/KLBaseKeyboard.m; sourceTree = "<group>"; };
 		36101568FFB760689D31D253548FD200 /* KLCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-prefix.pch"; sourceTree = "<group>"; };
 		36197BFF4F993C6704A8D3D0550F3337 /* NSObject+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSObject+KLExtension.h"; sourceTree = "<group>"; };
 		379EF1762B00BE52954A7347786ED433 /* Pods-KLKeyboard_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLKeyboard_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,22 +179,25 @@
 		414F0FF6D92BA734DBF865D60CCC5440 /* UIButton+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIButton+KLExtension.h"; sourceTree = "<group>"; };
 		49F6CA2D318A41F773C6D5336176EF53 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		4D321EE2C9241A6B849F67A69E9A918F /* Pods-KLKeyboard_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KLKeyboard_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4E81A6DE28AA0852D40CD715639D128C /* KLKeyboardBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLKeyboardBar.h; path = KLKeyboard/Classes/KLKeyboardBar.h; sourceTree = "<group>"; };
 		4EBA2D62D03F7D378BC1060982A04842 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5531AAD589DC711FE574FD1A61B0BEFA /* Pods-KLKeyboard_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KLKeyboard_Example.modulemap"; sourceTree = "<group>"; };
 		557B2B40871EA01C51816294CA991D2A /* Pods-KLKeyboard_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KLKeyboard_Example-umbrella.h"; sourceTree = "<group>"; };
-		567A3892C5245DD9AE924FBB4E6CCC7F /* KLKeyboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLKeyboard-prefix.pch"; sourceTree = "<group>"; };
 		56F7426474B863079BCC35E81CBBC4CD /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		58F32ED0873E16EDF8AFCF67881A15B5 /* UIImage+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIImage+KLExtension.h"; sourceTree = "<group>"; };
 		5967A717527AF5FC89AFA383D833719D /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		5AB3DFBE5B9F11B39FB03057CFEFF2B7 /* Pods-KLKeyboard_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLKeyboard_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5CDE7F8DEF34DBA80FE75FA192926E9A /* Pods-KLKeyboard_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLKeyboard_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5DD11E996BC633A129FC260E0830E7A4 /* KLKeyboardBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLKeyboardBarItem.m; path = KLKeyboard/Classes/KLKeyboardBarItem.m; sourceTree = "<group>"; };
 		5F0BADB0B5E2254028F1569FFA040ECE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5F66746B834C2EB96ED5E93B3416F45B /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		6C686FF5959068C0C124F34B60539998 /* KLKeyboardBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLKeyboardBarItem.h; path = KLKeyboard/Classes/KLKeyboardBarItem.h; sourceTree = "<group>"; };
 		6CCD2DA6D6C82A10CBF9EA532B092809 /* NSString+KLValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+KLValue.m"; path = "KLCategory/Classes/Foundation/NSString+KLValue.m"; sourceTree = "<group>"; };
 		6DAE581786E7EA3E5AF258A8C89D658D /* Pods-KLKeyboard_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KLKeyboard_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6DAED33CB0B131E6B5328B664B539CEB /* NSMutableParagraphStyle+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableParagraphStyle+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSMutableParagraphStyle+KLExtension.m"; sourceTree = "<group>"; };
 		72D40C9BFC9D8F6891BB4C3DE3946A9B /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		72E76A7611B798E89B8E916E42BD4673 /* NSObject+KLTouchFaceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KLTouchFaceID.h"; path = "KLCategory/Classes/Foundation/NSObject+KLTouchFaceID.h"; sourceTree = "<group>"; };
+		74814BF4C35F5D76B8872336D7A0CD18 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		7596B4BA2EF9A833C00CB955B4694284 /* UIImage+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIImage+KLExtension.m"; sourceTree = "<group>"; };
 		7869C8DD928E9F5BB4F943F30097EB2C /* NSDate+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSDate+KLExtension.h"; sourceTree = "<group>"; };
 		78F434C4CB07C1B2D0BF4AECB98A42CE /* KLCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KLCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,16 +206,16 @@
 		7C7B2A3DD8DA3AFC25E9CBC57675BE4F /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		7DA36D1B5589D3E07AEE07BC16DB3A64 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		81ABCD59957235172313B71ECC7F8ACC /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		82CCD0AA496C6B794E69C7D342E5C183 /* KLBaseKeyboard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLBaseKeyboard.h; path = KLKeyboard/Classes/KLBaseKeyboard.h; sourceTree = "<group>"; };
 		8311CEA713FC954D586A525FD4225D87 /* Pods-KLKeyboard_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLKeyboard_Tests-Info.plist"; sourceTree = "<group>"; };
 		8A1174350FE8217B934F2D6216F5A2D9 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		8DA9690228040F5C6198C086C911B8EF /* NSString+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSString+KLExtension.m"; sourceTree = "<group>"; };
 		8E90FE4A18DC7D70D60018500676E920 /* KLCategory-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLCategory-Info.plist"; sourceTree = "<group>"; };
 		8EE3F4DE7C931AA9F5290EC8F9080D90 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F2046B9C3387F0E4531D0C859D71132 /* KLKeyboardItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLKeyboardItem.m; path = KLKeyboard/Classes/KLKeyboardItem.m; sourceTree = "<group>"; };
 		8F823D951D2C1AB659B07BA9CFB425A5 /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
-		91A8E3B229FDF3D2F95DBBDAE725FC21 /* KLKeyboardItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLKeyboardItem.h; path = KLKeyboard/Classes/KLKeyboardItem.h; sourceTree = "<group>"; };
 		921E71F37C8D89596737D580B57BF809 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
 		94856085B3D205BFC677AA58657AA3D2 /* KLKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KLKeyboard.framework; path = KLKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		956FB713D41F652B3D1C022DF11B9E2A /* KLKeyboardBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLKeyboardBar.m; path = KLKeyboard/Classes/KLKeyboardBar.m; sourceTree = "<group>"; };
 		95B536285D81C663A245CD2C5BCC4CEB /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		974C4504230BF7220F9F059E6A028B86 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		9B2A8927BD632E6C7B1D5D1FDA53283C /* Pods-KLKeyboard_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KLKeyboard_Example-dummy.m"; sourceTree = "<group>"; };
@@ -215,13 +226,9 @@
 		AF8F3D8DB146500141BF7672DFAA3C37 /* KLCategory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCategory.xcconfig; sourceTree = "<group>"; };
 		B2477B953C83DF1DE32A74E3DB247EBD /* KLCategory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLCategory.modulemap; sourceTree = "<group>"; };
 		B365DAE7FC14D972AAFC5173433091D8 /* UILabel+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+KLExtension.h"; path = "KLCategory/Classes/UIKit/UILabel+KLExtension.h"; sourceTree = "<group>"; };
-		B7BDAA8836EB20409D6651403AE3D780 /* KLKeyboard.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KLKeyboard.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD1C0FF9719F56F90505EB8CD80D4E87 /* NSObject+KLTouchFaceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KLTouchFaceID.m"; path = "KLCategory/Classes/Foundation/NSObject+KLTouchFaceID.m"; sourceTree = "<group>"; };
-		C04451F86A3A5F1738677E58235AD46F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		C5D64B0E44621C3AF8C7684F5DCE0830 /* Pods_KLKeyboard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KLKeyboard_Example.framework; path = "Pods-KLKeyboard_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F0ACE088FC85727AEC55D5C528DBE0 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		C931150C7ADC9E2A3DD64C28776CE54B /* KLKeyboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLKeyboard-dummy.m"; sourceTree = "<group>"; };
-		CDEE8BCEDB573B3B14AE576E7B868C4D /* KLKeyboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLKeyboard.modulemap; sourceTree = "<group>"; };
 		CF50E5B2FCA3A6C70213CAB92ED45EFA /* NSRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSRuntime.h; path = KLCategory/Classes/Foundation/NSRuntime.h; sourceTree = "<group>"; };
 		D2E3B77DB2EAC328282D1183DA480623 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		D851DA8E715CFE6B0A0090FEDE5BEB6F /* Pods_KLKeyboard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KLKeyboard_Tests.framework; path = "Pods-KLKeyboard_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,7 +244,8 @@
 		F4FCBA57E93489B419AA94D3296B5BD5 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		F590A646B15AFD549674A7F2D09556AD /* NSObject+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSObject+KLExtension.m"; sourceTree = "<group>"; };
 		F64CF1D2A87FA27453861C67A6519F78 /* UIViewController+KLLogExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KLLogExtension.m"; path = "KLCategory/Classes/UIKit/UIViewController+KLLogExtension.m"; sourceTree = "<group>"; };
-		F83CEBB4B22D2FB5DB12039461129872 /* KLKeyboard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLKeyboard-Info.plist"; sourceTree = "<group>"; };
+		F9156541109AE2FA1268201836669DE7 /* KLEmojiKeyboard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLEmojiKeyboard.h; path = KLKeyboard/Classes/KLEmojiKeyboard.h; sourceTree = "<group>"; };
+		F9FFC181009804CCE01C717BDE24BEB1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		FCEDADDDBF7FEF3E4FA5FD506EC8E869 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,12 +266,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		588F4C8283B63FA75C8D5CB4655993E8 /* Frameworks */ = {
+		6DA35ADCED80F5DCC32C7907356966CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D273BE752DCD9229DE4DBD64D76EABFA /* Foundation.framework in Frameworks */,
-				BD6D8F5FEF96003544C3E921ACDA2C7A /* UIKit.framework in Frameworks */,
+				B52C1D845ACBC57BEA4296932452251B /* Foundation.framework in Frameworks */,
+				D1492C84F0B4940423C9F72CDB57B286 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,19 +283,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCFFCA33A085E7630E258FA5FADA3D05 /* Frameworks */ = {
+		E1B8B9F642186513DF25E9AD9A05002C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD296A044E4CF5C122353EEBB2D8A389 /* Foundation.framework in Frameworks */,
-				6FCFD2C38905135F92B17CC36BD50CE4 /* KLCategory.framework in Frameworks */,
-				DFA812BBE02940D731D3DA977FD698EB /* Masonry.framework in Frameworks */,
+				3984B472F75A4668E5407496B10F592B /* Foundation.framework in Frameworks */,
+				F52B0B8A62832E2474E74A50037B9DD3 /* KLCategory.framework in Frameworks */,
+				326FE07B8CF15F38D9923C8E5FC603D1 /* Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E748560F1053485ABF3A92FF1FD2B36 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				00723F97CC57AAA803DC71003D179DDB /* KLKeyboard.modulemap */,
+				05DFE9C08773C1BA6F29BF5B2B58387C /* KLKeyboard.xcconfig */,
+				2EF496D0935BA83FB31E83970DCAA419 /* KLKeyboard-dummy.m */,
+				02069E480BDBEDA9784C792DECEE7AE0 /* KLKeyboard-Info.plist */,
+				28FF61E9154474400227DC43DD5943A4 /* KLKeyboard-prefix.pch */,
+				15A7A3DAA0C7491A1A4F62EE60DC9982 /* KLKeyboard-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KLKeyboard";
+			sourceTree = "<group>";
+		};
 		1BAD8DD6E4EE2B387AD082A9EA5F47A1 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,14 +368,6 @@
 			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
-		3F6279FEBC6F22ADD709DC0A7656F7DF /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EF4AA9F4B8D9DAA4D2289EAD8138A20F /* KLKeyboard */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		6D928CA56BC6D1937E866FD25EB6C2FA /* Pods-KLKeyboard_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +383,24 @@
 			);
 			name = "Pods-KLKeyboard_Example";
 			path = "Target Support Files/Pods-KLKeyboard_Example";
+			sourceTree = "<group>";
+		};
+		8E46F9FF4B459C59F79F900AEF699FC3 /* KLKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				82CCD0AA496C6B794E69C7D342E5C183 /* KLBaseKeyboard.h */,
+				35CCFD845F3F0C7EFC7D96DE603F6CF1 /* KLBaseKeyboard.m */,
+				F9156541109AE2FA1268201836669DE7 /* KLEmojiKeyboard.h */,
+				322E0ED2E41D65154EC234C0DEDE38A4 /* KLEmojiKeyboard.m */,
+				4E81A6DE28AA0852D40CD715639D128C /* KLKeyboardBar.h */,
+				956FB713D41F652B3D1C022DF11B9E2A /* KLKeyboardBar.m */,
+				6C686FF5959068C0C124F34B60539998 /* KLKeyboardBarItem.h */,
+				5DD11E996BC633A129FC260E0830E7A4 /* KLKeyboardBarItem.m */,
+				EFFD9913B7308D13A0A76FC5D00FC395 /* Pod */,
+				0E748560F1053485ABF3A92FF1FD2B36 /* Support Files */,
+			);
+			name = KLKeyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		942331A50CAF4FF314939562F305534A /* Support Files */ = {
@@ -403,20 +435,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		B21DA760C6AC7B1C16704751BF6C55F4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CDEE8BCEDB573B3B14AE576E7B868C4D /* KLKeyboard.modulemap */,
-				255D531D24054D5D25BC26AF52CA8517 /* KLKeyboard.xcconfig */,
-				C931150C7ADC9E2A3DD64C28776CE54B /* KLKeyboard-dummy.m */,
-				F83CEBB4B22D2FB5DB12039461129872 /* KLKeyboard-Info.plist */,
-				567A3892C5245DD9AE924FBB4E6CCC7F /* KLKeyboard-prefix.pch */,
-				29F524BCC411FDC777332E58B9264192 /* KLKeyboard-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/KLKeyboard";
-			sourceTree = "<group>";
-		};
 		B3BB0A5C5EB920286F3920F4A89BE504 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,7 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				3F6279FEBC6F22ADD709DC0A7656F7DF /* Development Pods */,
+				FA2D02426255EC0265B048CDCC7BA0DD /* Development Pods */,
 				34C77E1E5A38F1468C3747AA1D5380F8 /* Frameworks */,
 				B3BB0A5C5EB920286F3920F4A89BE504 /* Pods */,
 				DB88DD9216B486230734E9AE220E6B81 /* Products */,
@@ -448,16 +466,6 @@
 				D851DA8E715CFE6B0A0090FEDE5BEB6F /* Pods_KLKeyboard_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E0C8FE3FF25CE055B1F9059C3703A624 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				B7BDAA8836EB20409D6651403AE3D780 /* KLKeyboard.podspec */,
-				C04451F86A3A5F1738677E58235AD46F /* LICENSE */,
-				301CBC279D57B6FF9F8EBCDCA84DDABC /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		E10490D748535D38121F890107A5BBAE /* KLCategory */ = {
@@ -515,53 +523,36 @@
 			path = "Target Support Files/Pods-KLKeyboard_Tests";
 			sourceTree = "<group>";
 		};
-		EF4AA9F4B8D9DAA4D2289EAD8138A20F /* KLKeyboard */ = {
+		EFFD9913B7308D13A0A76FC5D00FC395 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				32C03440646398E9BEFFED31841BEC2E /* KLKeyboard.h */,
-				14B2D890E192D6F175F1972524898850 /* KLKeyboard.m */,
-				91A8E3B229FDF3D2F95DBBDAE725FC21 /* KLKeyboardItem.h */,
-				8F2046B9C3387F0E4531D0C859D71132 /* KLKeyboardItem.m */,
-				E0C8FE3FF25CE055B1F9059C3703A624 /* Pod */,
-				B21DA760C6AC7B1C16704751BF6C55F4 /* Support Files */,
+				1FF1BF6E6714FF84F30D9F1377F85904 /* KLKeyboard.podspec */,
+				F9FFC181009804CCE01C717BDE24BEB1 /* LICENSE */,
+				74814BF4C35F5D76B8872336D7A0CD18 /* README.md */,
 			);
-			name = KLKeyboard;
-			path = ../..;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		FA2D02426255EC0265B048CDCC7BA0DD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E46F9FF4B459C59F79F900AEF699FC3 /* KLKeyboard */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0169DBC99F4322F835D762583F389F2F /* Headers */ = {
+		3560677E3E4BED93A75A57424DC34BD9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0450C074D3032C1FB553CBECE677917C /* MASCompositeConstraint.h in Headers */,
-				65AEF2F9ED4641143484EA93B58DE9D1 /* MASConstraint+Private.h in Headers */,
-				6CAA680B00EFF321535B2F1B642ABE91 /* MASConstraint.h in Headers */,
-				136A025F7E033EE0843DB07F234F3761 /* MASConstraintMaker.h in Headers */,
-				D1571FBE0FDD992B58E6B522965AE70A /* MASLayoutConstraint.h in Headers */,
-				A6515488D6F06FA61BBADB4B0F4C0736 /* Masonry-umbrella.h in Headers */,
-				AF9F1FF61F709890D6E632C82C0FF0B7 /* Masonry.h in Headers */,
-				2838F2A249C93D2C0E7993176C378A3C /* MASUtilities.h in Headers */,
-				B13D66B7A7B5E008ED3D1A194DAA167E /* MASViewAttribute.h in Headers */,
-				E60B6D7647D6E7AE84E87ABB34E4A52C /* MASViewConstraint.h in Headers */,
-				D814852B763573FB11B20322FFB6302E /* NSArray+MASAdditions.h in Headers */,
-				4C5D188476E76DA6C3A8DE22FDE8BEDF /* NSArray+MASShorthandAdditions.h in Headers */,
-				1053B66EE77081BF6245889839117BF4 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				AA688816C07FF9AC92E33B79C4046567 /* View+MASAdditions.h in Headers */,
-				863A7980B592C293D008C311390E4553 /* View+MASShorthandAdditions.h in Headers */,
-				73EFD52BF06C4CB019998A6ED10AA7B8 /* ViewController+MASAdditions.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E8C114FC35066EEEE73DD2525DFC62B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5D8D3077B9243EC7D489F0ADBE6F2A16 /* KLKeyboard-umbrella.h in Headers */,
-				D8434BBA90C0B17FFA654F74100BEBD2 /* KLKeyboard.h in Headers */,
-				DBC93F6EA732A426F16D26DD4F4D5BC7 /* KLKeyboardItem.h in Headers */,
+				8787805294C3EB666A6CE0931BF7B07B /* KLBaseKeyboard.h in Headers */,
+				B756E69BAA8A0963EDB0A8E65DEE75AD /* KLEmojiKeyboard.h in Headers */,
+				0578AE5DC774ACA51FAB85A973EB5EEC /* KLKeyboard-umbrella.h in Headers */,
+				7BB0B1CBACAB7C9917713BC02B5B686B /* KLKeyboardBar.h in Headers */,
+				D51923F0BF79E8F1AFD901D898ED03CC /* KLKeyboardBarItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +569,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A17739D0465FA360D0ED1BD7F01794 /* Pods-KLKeyboard_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1716F3530E8274BA51DF915D14BCB4E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC191DDB3343C808D47256206C1042E /* MASCompositeConstraint.h in Headers */,
+				D3A831F84AF3F2C9310F4590C4F08771 /* MASConstraint+Private.h in Headers */,
+				FE5404587DBEDAF97C583CA3A5079B0D /* MASConstraint.h in Headers */,
+				B313D8EE0FDFFFEF44ACA715D0B8EE48 /* MASConstraintMaker.h in Headers */,
+				7F21FAF709FD21DF26C4AFCA9972439B /* MASLayoutConstraint.h in Headers */,
+				A449628386FFEFBB4CD1004DE1147E94 /* Masonry-umbrella.h in Headers */,
+				83373C17B4DD0861F1F0FAF44F20E2E5 /* Masonry.h in Headers */,
+				4AB8A41F23E60E734051A2A762149296 /* MASUtilities.h in Headers */,
+				A1F8C303C2A1166C0ECED8379466BDE1 /* MASViewAttribute.h in Headers */,
+				36071DFBB9B6C4D25F8A5A1E4704177E /* MASViewConstraint.h in Headers */,
+				EDB82EE98422DD992C0718DE4956B9E3 /* NSArray+MASAdditions.h in Headers */,
+				B326A249191F41034C64CF1ABB8F0B18 /* NSArray+MASShorthandAdditions.h in Headers */,
+				7B401172501F192BE59C9FA6A9DE0B93 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				DFD6C495AFF434FB0AB062C0B981F281 /* View+MASAdditions.h in Headers */,
+				E371F504261BF52E180BF942C87D7A28 /* View+MASShorthandAdditions.h in Headers */,
+				FEBEA0C10C3325CD719037D4DEE88C2A /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,18 +624,18 @@
 /* Begin PBXNativeTarget section */
 		4B2BB6DB16C5AA7B233F669E6C8DA63E /* KLKeyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA3A0FD72ACA9B2F52A69E29348BA2F2 /* Build configuration list for PBXNativeTarget "KLKeyboard" */;
+			buildConfigurationList = 32450DFA8A5BCFC6F897850BBE7DE11A /* Build configuration list for PBXNativeTarget "KLKeyboard" */;
 			buildPhases = (
-				0E8C114FC35066EEEE73DD2525DFC62B /* Headers */,
-				BF3807CBEE17377380FE8D4567C7DB6B /* Sources */,
-				FCFFCA33A085E7630E258FA5FADA3D05 /* Frameworks */,
-				86CBD5250DA3A01153D051D3A869692A /* Resources */,
+				3560677E3E4BED93A75A57424DC34BD9 /* Headers */,
+				1DC8C526F70D59C9364D16053374D7A0 /* Sources */,
+				E1B8B9F642186513DF25E9AD9A05002C /* Frameworks */,
+				82E84E845CEB2FB68E2DFC2F260E6929 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5F7592A70F6FDA8208D1735619C44AEF /* PBXTargetDependency */,
-				DD0932925B6836E624C814C7ECEB974E /* PBXTargetDependency */,
+				0CD27E243921ACC8F16A35B3546B765C /* PBXTargetDependency */,
+				3B138CC4A34B6E160EDEFF8D3CF708D0 /* PBXTargetDependency */,
 			);
 			name = KLKeyboard;
 			productName = KLKeyboard;
@@ -649,12 +663,12 @@
 		};
 		55AF53E6C77A10ED4985E04D74A8878E /* Masonry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7708755C4F706C183CCAFE2C619D82B2 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildConfigurationList = BCE6C3B862A90D5BD41ADAB8648B2032 /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				0169DBC99F4322F835D762583F389F2F /* Headers */,
-				B3F1227616FAE6908C074908D2569909 /* Sources */,
-				588F4C8283B63FA75C8D5CB4655993E8 /* Frameworks */,
-				B9B489DB60CBD34707C092304AD3A5E5 /* Resources */,
+				A1716F3530E8274BA51DF915D14BCB4E /* Headers */,
+				76593AFAD6682E1E0D89234E05C53BD3 /* Sources */,
+				6DA35ADCED80F5DCC32C7907356966CE /* Frameworks */,
+				240A6330B3BE445BA573603A624709B8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -735,6 +749,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		240A6330B3BE445BA573603A624709B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A943D41082FFE1FA4A8478EC826A623 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -749,14 +770,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86CBD5250DA3A01153D051D3A869692A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9B489DB60CBD34707C092304AD3A5E5 /* Resources */ = {
+		82E84E845CEB2FB68E2DFC2F260E6929 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -778,6 +792,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15BC45EA1510855DD74F8F3E67FFF1D /* Pods-KLKeyboard_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8C526F70D59C9364D16053374D7A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59ED1836533319BDF3B751580949373 /* KLBaseKeyboard.m in Sources */,
+				384A4636FF0188F0C943C6C0DE0D9499 /* KLEmojiKeyboard.m in Sources */,
+				ABD35DA2CF2396D75BBAEEA74F21BF18 /* KLKeyboard-dummy.m in Sources */,
+				4FFCD4F6A685DCB2348CB59F192CA14A /* KLKeyboardBar.m in Sources */,
+				6020D2D59AC3837775C4ADFAF0F99C4D /* KLKeyboardBarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,31 +829,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3F1227616FAE6908C074908D2569909 /* Sources */ = {
+		76593AFAD6682E1E0D89234E05C53BD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB93FA704BBF1570BB66306E5736D25 /* MASCompositeConstraint.m in Sources */,
-				67DF512C941DF9BE35DEBAECAC8FF4B0 /* MASConstraint.m in Sources */,
-				99948369A847962179F76FED79307D03 /* MASConstraintMaker.m in Sources */,
-				87F1382BC29ACBF54CC58AD52EAB228D /* MASLayoutConstraint.m in Sources */,
-				B70AF25DD7273357FE8E56A4A37C7FEC /* Masonry-dummy.m in Sources */,
-				D3A576EB50B529D8580CAD46C2C55145 /* MASViewAttribute.m in Sources */,
-				E80A9405905772B8E7D7A295B380C9B8 /* MASViewConstraint.m in Sources */,
-				A347F9E97C14019E1823A46240C1562C /* NSArray+MASAdditions.m in Sources */,
-				7E5BB63D129A3DF00ACB77AE0DF8FBB1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				393F3F856AA4949446991689D4423AEC /* View+MASAdditions.m in Sources */,
-				2A6531733FE95376D47E67BE611133F7 /* ViewController+MASAdditions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF3807CBEE17377380FE8D4567C7DB6B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				609CCED789B39D3666480020002C3D42 /* KLKeyboard-dummy.m in Sources */,
-				33F17544DE21AF4BD45722C1039C534B /* KLKeyboard.m in Sources */,
-				741C383A09A63CF4817970D7CB248521 /* KLKeyboardItem.m in Sources */,
+				D8D33881AE64F3CBD3221BC159451C81 /* MASCompositeConstraint.m in Sources */,
+				65A7F8685558262770AB387B5967AB14 /* MASConstraint.m in Sources */,
+				40BD6C00C1D61A3A8E456E0E0DAAD2F6 /* MASConstraintMaker.m in Sources */,
+				B7D6141DD39412EC9BC91251A4272329 /* MASLayoutConstraint.m in Sources */,
+				4D2166BDC6967A5C49207B33C1F441EF /* Masonry-dummy.m in Sources */,
+				2E5E7EE78FEFE7BD648281F0F671BEBC /* MASViewAttribute.m in Sources */,
+				3764AB51A53D72CDDFC3E59F0B5CC5C8 /* MASViewConstraint.m in Sources */,
+				EC8D044E90AA286AA8185E25B570623F /* NSArray+MASAdditions.m in Sources */,
+				55F95C89CBC8E131C839541EDE05B059 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				B028956EEAEB59BBF8F034DD91A4B33D /* View+MASAdditions.m in Sources */,
+				2F35F1F8549978646FAAD96F95272EC0 /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +858,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0CD27E243921ACC8F16A35B3546B765C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KLCategory;
+			target = BCFF1723DAF5C11A8128CBE09DB0A05A /* KLCategory */;
+			targetProxy = 280AF5A9613888DB18849B9CEF054655 /* PBXContainerItemProxy */;
+		};
 		1C1BFAA79DBF740231923B7E20F250A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
@@ -854,11 +876,11 @@
 			target = FD667E1E82EFB0F5A19D0C719623BA13 /* Pods-KLKeyboard_Example */;
 			targetProxy = A1F3703702222DCF9A35415661103D12 /* PBXContainerItemProxy */;
 		};
-		5F7592A70F6FDA8208D1735619C44AEF /* PBXTargetDependency */ = {
+		3B138CC4A34B6E160EDEFF8D3CF708D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = KLCategory;
-			target = BCFF1723DAF5C11A8128CBE09DB0A05A /* KLCategory */;
-			targetProxy = 235FF8DEA0118AE9C68EE815369EF214 /* PBXContainerItemProxy */;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = D39633F3758E3B4F2B3C8CA646EE0440 /* PBXContainerItemProxy */;
 		};
 		6727F52BD9914F9DBE4E386636085B9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -871,12 +893,6 @@
 			name = KLCategory;
 			target = BCFF1723DAF5C11A8128CBE09DB0A05A /* KLCategory */;
 			targetProxy = 7C86D9979CFC18311B0E2947AD1EDC27 /* PBXContainerItemProxy */;
-		};
-		DD0932925B6836E624C814C7ECEB974E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = AC01DB0EBD96F76D782B42EC7A2CCDEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -908,6 +924,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		225D44B4553A6AA2065715FB12372E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05DFE9C08773C1BA6F29BF5B2B58387C /* KLKeyboard.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KLKeyboard/KLKeyboard-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KLKeyboard/KLKeyboard-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KLKeyboard/KLKeyboard.modulemap";
+				PRODUCT_MODULE_NAME = KLKeyboard;
+				PRODUCT_NAME = KLKeyboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -978,37 +1025,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		5E503930A62C7239CFAA35DFBFCC8406 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 255D531D24054D5D25BC26AF52CA8517 /* KLKeyboard.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KLKeyboard/KLKeyboard-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KLKeyboard/KLKeyboard-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KLKeyboard/KLKeyboard.modulemap";
-				PRODUCT_MODULE_NAME = KLKeyboard;
-				PRODUCT_NAME = KLKeyboard;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		7132A860BBE5AA1966381C93B8C000CB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1201,39 +1217,7 @@
 			};
 			name = Debug;
 		};
-		B025FAB17F32AAD6939706FD7194EEAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 921E71F37C8D89596737D580B57BF809 /* Masonry.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CDB4A71A015A6DD89D437C4FCAABE777 /* Debug */ = {
+		CCAEAA7DE3E09FD3AB596ACBAC2C0B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 921E71F37C8D89596737D580B57BF809 /* Masonry.xcconfig */;
 			buildSettings = {
@@ -1263,6 +1247,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		D63B0777C52F0FBB64C21251A3F49F58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05DFE9C08773C1BA6F29BF5B2B58387C /* KLKeyboard.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KLKeyboard/KLKeyboard-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KLKeyboard/KLKeyboard-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KLKeyboard/KLKeyboard.modulemap";
+				PRODUCT_MODULE_NAME = KLKeyboard;
+				PRODUCT_NAME = KLKeyboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		E0B22021F76843EE101869BE3B17F54F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1296,9 +1312,9 @@
 			};
 			name = Release;
 		};
-		E754C2FF73E252CC75C477AFF90A19C4 /* Release */ = {
+		EC6AFF3D67D57FC95A498BD7FAB973DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 255D531D24054D5D25BC26AF52CA8517 /* KLKeyboard.xcconfig */;
+			baseConfigurationReference = 921E71F37C8D89596737D580B57BF809 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1309,14 +1325,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KLKeyboard/KLKeyboard-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KLKeyboard/KLKeyboard-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KLKeyboard/KLKeyboard.modulemap";
-				PRODUCT_MODULE_NAME = KLKeyboard;
-				PRODUCT_NAME = KLKeyboard;
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1331,6 +1347,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		32450DFA8A5BCFC6F897850BBE7DE11A /* Build configuration list for PBXNativeTarget "KLKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225D44B4553A6AA2065715FB12372E75 /* Debug */,
+				D63B0777C52F0FBB64C21251A3F49F58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1340,20 +1365,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7708755C4F706C183CCAFE2C619D82B2 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDB4A71A015A6DD89D437C4FCAABE777 /* Debug */,
-				B025FAB17F32AAD6939706FD7194EEAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A16F1CE839E6C48631F6CD75E8CB40F9 /* Build configuration list for PBXNativeTarget "Pods-KLKeyboard_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EA860DD2A8288C68F6A5640B01BB6B1 /* Debug */,
 				7132A860BBE5AA1966381C93B8C000CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE6C3B862A90D5BD41ADAB8648B2032 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAEAA7DE3E09FD3AB596ACBAC2C0B7A /* Debug */,
+				EC6AFF3D67D57FC95A498BD7FAB973DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1372,15 +1397,6 @@
 			buildConfigurations = (
 				26F750033B70A55AB23CF917CF18C132 /* Debug */,
 				E0B22021F76843EE101869BE3B17F54F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA3A0FD72ACA9B2F52A69E29348BA2F2 /* Build configuration list for PBXNativeTarget "KLKeyboard" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5E503930A62C7239CFAA35DFBFCC8406 /* Debug */,
-				E754C2FF73E252CC75C477AFF90A19C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

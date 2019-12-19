@@ -1,18 +1,18 @@
 //
-//  KLKeyboard.m
-//  KLKeyboard
+//  KLKeyboardBar.m
+//  KLKeyboardBar
 //
 //  Created by Logic on 2019/12/19.
 //
 
-#import "KLKeyboard.h"
+#import "KLKeyboardBar.h"
 @import Masonry;
 @import KLCategory;
 
 #define KLTEXTVIEWHEIGHT    36.0    // 文本默认高度
 #define KLTEXTVIEWMAXHEIGHT 111.5f  // 4行文本的高度，由实际测试得出的结果
 
-@interface KLKeyboard () <UITextViewDelegate>
+@interface KLKeyboardBar () <UITextViewDelegate>
 
 @property (strong, nonatomic) UIStackView *leftStack;
 @property (strong, nonatomic) UIStackView *rightStack;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation KLKeyboard
+@implementation KLKeyboardBar
 
 // MARK: - System
 - (instancetype)initWithFrame:(CGRect)frame
@@ -73,7 +73,7 @@
         [self addSubview:self.recordItem];
         
         // 录音按钮默认隐藏
-        self.recordItem.hidden = YES;
+        self.recordItem.alpha = 0;
         
         // 系统键盘通知监听
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -114,10 +114,10 @@
 }
 
 // MARK: - Private
-- (void)addKeyboardItemWithType:(KLKeyboardItemType)type Image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage callBack:(void (^)(KLKeyboardItem *item))callBack
+- (void)addKeyboardItemWithType:(KLKeyboardBarItemType)type Image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage callBack:(void (^)(KLKeyboardBarItem *item))callBack
 {
-    // 创建KeyboardItem
-    KLKeyboardItem *item = [KLKeyboardItem buttonWithType:UIButtonTypeCustom];
+    // 创建KeyboardBarItem
+    KLKeyboardBarItem *item = [KLKeyboardBarItem buttonWithType:UIButtonTypeCustom];
     [item setImage:image forState:UIControlStateNormal];
     [item setImage:highlightedImage forState:UIControlStateHighlighted];
     
@@ -130,7 +130,7 @@
     }];
     
     // 左右菜单视图更新
-    if (type == KLKeyboardItemTypeLeft) {
+    if (type == KLKeyboardBarItemTypeLeft) {
         [self.leftStack addArrangedSubview:item];
         [self.leftStack mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(10);
@@ -226,8 +226,7 @@
 
 - (void)hiddenRecordItem:(BOOL)hidden
 {
-    self.recordItem.hidden = hidden;
-    self.textView.hidden = !hidden;
+    [UIView animateWithDuration:0.15 animations:^{ self.recordItem.alpha = hidden ? 0 : 1; }];
     
     if (hidden) {
         // 显示文本

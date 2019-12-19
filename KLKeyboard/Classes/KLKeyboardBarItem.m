@@ -1,16 +1,16 @@
 //
-//  KLKeyboardItem.m
-//  KLKeyboard
+//  KLKeyboardBarItem.m
+//  KLKeyboardBarItem
 //
 //  Created by Logic on 2019/12/19.
 //
 
-#import "KLKeyboardItem.h"
+#import "KLKeyboardBarItem.h"
 @import KLCategory;
 
-@implementation KLKeyboardItem
+@implementation KLKeyboardBarItem
 
-- (void)setImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage forMode:(KLKeyboardItemMode)mode
+- (void)setImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage forMode:(KLKeyboardBarItemMode)mode
 {
     self.mode = mode;
     [self setImage:image forState:UIControlStateNormal];
@@ -29,6 +29,7 @@
         [self addTarget:self action:@selector(talkButtonDown:) forControlEvents:UIControlEventTouchDown];
         [self addTarget:self action:@selector(talkButtonUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [self addTarget:self action:@selector(talkButtonUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
+        [self addTarget:self action:@selector(talkButtonDragInside:) forControlEvents:UIControlEventTouchDragInside];
         [self addTarget:self action:@selector(talkButtonDragOutside:) forControlEvents:UIControlEventTouchDragOutside];
     }
     return self;
@@ -50,6 +51,12 @@
 - (void)talkButtonUpOutside:(UIButton *)sender
 {
     NSLogDebug(@"取消录音");
+}
+
+/// 取消录音
+- (void)talkButtonDragInside:(UIButton *)sender
+{
+    NSLogDebug(@"继续录音");
 }
 
 /// 取消录音
