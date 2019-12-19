@@ -1,0 +1,30 @@
+{
+  "name": "KLKeyboard",
+  "version": "1.0.0",
+  "summary": "文本、表情键盘",
+  "description": "组件简介：\n文本、表情键盘",
+  "homepage": "https://github.com/Kalanhall",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Kalanhall@163.com": "wujm002@galanz.com"
+  },
+  "source": {
+    "git": "https://github.com/Kalanhall/KLKeyboard.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "KLKeyboard/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "KLCategory": [
+
+    ]
+  }
+}

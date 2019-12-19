@@ -1,0 +1,28 @@
+PODS:
+  - KLCategory (1.0.5)
+  - KLKeyboard (1.0.0):
+    - KLCategory
+    - Masonry
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - KLKeyboard (from `../`)
+
+SPEC REPOS:
+  https://github.com/Kalanhall/Specs.git:
+    - KLCategory
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  KLKeyboard:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KLCategory: a03a535bcd072f5ac82b0150840998fd1ef6727d
+  KLKeyboard: 39885090a161598825e7d6f39ff1151e373f8d3d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: fac09c5d57b0a207c5a5f7c0bc2a1545b2c127d2
+
+COCOAPODS: 1.8.3
