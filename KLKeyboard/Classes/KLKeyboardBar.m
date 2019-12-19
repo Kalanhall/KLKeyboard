@@ -115,12 +115,11 @@
 }
 
 // MARK: - Private
-- (void)addKeyboardItemWithType:(KLKeyboardBarItemType)type Image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage callBack:(void (^)(KLKeyboardBarItem *item))callBack
+- (KLKeyboardBarItem *)addKeyboardItemWithType:(KLKeyboardBarItemType)type Image:(UIImage *)image highlightedImage:(UIImage *)highlightedImage callBack:(void (^)(KLKeyboardBarItem *item))callBack
 {
     // 创建KeyboardBarItem
     KLKeyboardBarItem *item = [KLKeyboardBarItem buttonWithType:UIButtonTypeCustom];
-    [item setImage:image forState:UIControlStateNormal];
-    [item setImage:highlightedImage forState:UIControlStateHighlighted];
+    [item setImage:image highlightedImage:highlightedImage forSeq:0];
     
     // 事件处理
     __weak typeof(item) weakitem = item;
@@ -161,6 +160,7 @@
     [self.recordItem mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.center.width.height.mas_equalTo(self.textView);
     }];
+    return item;
 }
 
 - (void)reloadTextViewWithAnimation:(BOOL)animation

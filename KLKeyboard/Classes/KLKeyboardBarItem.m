@@ -8,13 +8,39 @@
 #import "KLKeyboardBarItem.h"
 @import KLCategory;
 
+@interface KLKeyboardBarItem ()
+
+@property (strong, nonatomic) NSMutableDictionary *imageInfo;
+
+@end
+
 @implementation KLKeyboardBarItem
 
-- (void)setImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage forMode:(KLKeyboardBarItemMode)mode
+- (void)setImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage forSeq:(KLKeyboardBarItemSeq)seq
 {
-    self.mode = mode;
-    [self setImage:image forState:UIControlStateNormal];
-    [self setImage:highlightedImage forState:UIControlStateHighlighted];
+    NSAssert(image != nil && highlightedImage != nil, @"图片不可为空!");
+    [self.imageInfo setValue:@[image, highlightedImage] forKey:@(seq).description];
+    if (self.imageInfo.allKeys.count == 1) {
+        // 首次添加，设为默认显示图片
+        self.seq = seq;
+    }
+}
+
+- (NSMutableDictionary *)imageInfo
+{
+    if (_imageInfo == nil) {
+        _imageInfo = NSMutableDictionary.dictionary;
+    }
+    return _imageInfo;
+}
+
+- (void)setSeq:(KLKeyboardBarItemSeq)seq
+{
+    _seq = seq;
+    // 设置当前图片样式
+    NSArray *imageInfo = [self.imageInfo valueForKey:@(seq).description];
+    [self setImage:imageInfo.firstObject forState:UIControlStateNormal];
+    [self setImage:imageInfo.lastObject forState:UIControlStateHighlighted];
 }
 
 @end
@@ -38,31 +64,41 @@
 /// 开始录音
 - (void)talkButtonDown:(UIButton *)sender
 {
-    NSLogDebug(@"开始录音");
+    if (self.recordStartCompletion) {
+        self.recordStartCompletion();
+    }
 }
 
 /// 停止录音
 - (void)talkButtonUpInside:(UIButton *)sender
 {
-    NSLogDebug(@"结束录音");
+    if (self.recordEndCompletion) {
+        self.recordEndCompletion();
+    }
 }
 
 /// 取消录音
 - (void)talkButtonUpOutside:(UIButton *)sender
 {
-    NSLogDebug(@"取消录音");
+    if (self.recordCancleCompletion) {
+        self.recordCancleCompletion();
+    }
 }
 
-/// 取消录音
+/// 由外部移入按钮内，继续录音
 - (void)talkButtonDragInside:(UIButton *)sender
 {
-    NSLogDebug(@"继续录音");
+    if (self.recordContinueCompletion) {
+        self.recordContinueCompletion();
+    }
 }
 
-/// 取消录音
+/// 移出按钮外，即将结束录音
 - (void)talkButtonDragOutside:(UIButton *)sender
 {
-    NSLogDebug(@"松开结束");
+    if (self.recordWillEndCompletion) {
+        self.recordWillEndCompletion();
+    }
 }
 
 @end
