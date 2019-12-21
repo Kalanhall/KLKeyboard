@@ -6,15 +6,71 @@
 //
 
 #import "KLBaseKeyboard.h"
+@import KLCategory;
+@import Masonry;
+
+NSString * const KLKeyboardWillShowNotification = @"KLKeyboardWillShowNotification";
+NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotification";
+
+#define KLKEYBOARDHEIGHT 260 + KLAutoBottomInset()
 
 @implementation KLBaseKeyboard
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // 对当前自定义键盘事件进行互斥处理
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:KLKeyboardWillShowNotification object:nil];
+    }
+    return self;
 }
-*/
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    if (![notification.object isKindOfClass:self.class]) {
+        // 不是本类显示，其他类一律隐藏
+        [self hideKeyboardWithoutNotification:NO animated:NO];
+    }
+}
+
+- (void)showKeyboardInView:(UIView *)view animated:(BOOL)animated
+{
+    if (![view.subviews containsObject:self]) {
+        [view addSubview:self];
+        [self mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.mas_equalTo(0);
+            make.height.mas_equalTo(KLKEYBOARDHEIGHT);
+        }];
+    } else {
+        [view bringSubviewToFront:self];
+    }
+    
+    self.hidden = NO;
+    self.transform = CGAffineTransformMakeTranslation(0, KLKEYBOARDHEIGHT);
+    [UIView animateWithDuration:KLAnimationTime animations:^{
+        self.transform = CGAffineTransformIdentity;
+    }];
+    
+    [self.superview layoutIfNeeded];
+    [NSNotificationCenter.defaultCenter postNotificationName:KLKeyboardWillShowNotification object:self];
+}
+
+- (void)hideKeyboardAnimated:(BOOL)animated
+{
+    [self hideKeyboardWithoutNotification:YES animated:animated];
+}
+
+- (void)hideKeyboardWithoutNotification:(BOOL)notification animated:(BOOL)animated
+{
+    [UIView animateWithDuration:animated ? KLAnimationTime : 0 animations:^{
+        self.transform = CGAffineTransformMakeTranslation(0, KLKEYBOARDHEIGHT);
+    } completion:^(BOOL finished) {
+        self.hidden = YES;
+    }];
+    if (notification) {
+        [NSNotificationCenter.defaultCenter postNotificationName:KLKeyboardWillHideNotification object:nil];
+    }
+}
 
 @end

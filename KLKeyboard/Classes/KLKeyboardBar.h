@@ -10,10 +10,12 @@
 
 @interface KLKeyboardBar : UIView
 
-@property (strong, nonatomic) void (^sendTextCompletion)(NSString *text);
-
-/// 录音按钮
+/// 顶部线条颜色，默认0xE2E2E2
+@property (strong, nonatomic) UIColor *toplineColor;
+/// 录音按钮，实现录音业务的各种回调
 @property (strong, nonatomic, readonly) KLKeyboardRecordItem *recordItem;
+/// 发送消息回调
+@property (strong, nonatomic) void (^sendTextCompletion)(NSString *text);
 
 /// 添加输入框左右两边的功能按钮
 ///
@@ -32,6 +34,6 @@
 - (void)inputViewResignTextFirstResponder;
 
 /// 录音按钮控制
-- (void)hiddenRecordItem:(BOOL)hidden;
+- (void)hiddenRecordItem:(BOOL)hidden cacheText:(BOOL)cache;
 
 @end

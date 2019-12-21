@@ -1,14 +1,14 @@
 //
-//  KLEmojiKeyboard.m
+//  KLFuncKeyboard.m
 //  KLKeyboard
 //
 //  Created by Kalan on 2019/12/21.
 //
 
-#import "KLEmojiKeyboard.h"
+#import "KLFuncKeyboard.h"
 @import KLCategory;
 
-@implementation KLEmojiKeyboard
+@implementation KLFuncKeyboard
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

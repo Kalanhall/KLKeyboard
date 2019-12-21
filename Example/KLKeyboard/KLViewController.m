@@ -13,7 +13,18 @@
 
 @interface KLViewController ()
 
+/// 输入栏
 @property (strong, nonatomic) KLKeyboardBar *keyboardbar;
+/// 语音按钮
+@property (strong, nonatomic) KLKeyboardBarItem *voiceItem;
+/// 表情按钮
+@property (strong, nonatomic) KLKeyboardBarItem *emojiItem;
+/// 更多按钮
+@property (strong, nonatomic) KLKeyboardBarItem *moreItem;
+/// 表情键盘
+@property (strong, nonatomic) KLEmojiKeyboard *emojiKeyboard;
+/// 功能键盘
+@property (strong, nonatomic) KLFuncKeyboard *funcKeyboard;
 
 @end
 
@@ -23,7 +34,7 @@
 {
     [super viewDidLoad];
     self.title = @"表情键盘";
-    self.view.backgroundColor = UIColor.whiteColor;
+    self.view.backgroundColor = [UIColor kl_colorWithRGBA:250.0, 250.0, 250.0, 1.0, nil];
     
     self.keyboardbar = KLKeyboardBar.new;
     [self.view addSubview:self.keyboardbar];
@@ -33,39 +44,82 @@
     
     // MARK: 通过枚举KLKeyboardBarItemSeq完成按钮2种模式下的切换
     __weak typeof(self) weakself = self;
-    KLKeyboardBarItem *item = [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeLeft
+    self.voiceItem = [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeLeft
                                                                   Image:[UIImage imageNamed:@"kl_voice"]
                                                        highlightedImage:[UIImage imageNamed:@"kl_voice_h"]
                                                                callBack:^(KLKeyboardBarItem * _Nonnull item) {
-        item.seq = item.seq == 0 ? 110 : 0;
+        weakself.voiceItem.seq = weakself.voiceItem.seq == 0 ? 1 : 0;
         
-        if (item.seq == 110) {
+        if (weakself.voiceItem.seq == 1) {
             [weakself.keyboardbar inputViewResignTextFirstResponder];
-            [weakself.keyboardbar hiddenRecordItem:NO];
+            [weakself.keyboardbar hiddenRecordItem:NO cacheText:YES];
             NSLogDebug(@"录音");
         } else {
             [weakself.keyboardbar inputViewBecomeFirstResponder];
-            [weakself.keyboardbar hiddenRecordItem:YES];
+            [weakself.keyboardbar hiddenRecordItem:YES cacheText:YES];
             NSLogDebug(@"键盘");
         }
+        
+        // 还原表情按钮状态
+        weakself.emojiItem.seq = 0;
+        weakself.moreItem.tag = 0;
+        // 隐藏表情键盘
+        [weakself.emojiKeyboard hideKeyboardAnimated:YES];
+        [weakself.funcKeyboard hideKeyboardAnimated:YES];
     }];
     // 第二种模式显示的图片样式
-    [item setImage:[UIImage imageNamed:@"kl_keboard"] highlightedImage:[UIImage imageNamed:@"kl_keboard_h"] forSeq:110];
+    [self.voiceItem setImage:[UIImage imageNamed:@"kl_keboard"] highlightedImage:[UIImage imageNamed:@"kl_keboard_h"] forSeq:1];
     
     //  MARK: 表情键盘调用
-    [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeRight
+    self.emojiKeyboard = KLEmojiKeyboard.new;
+    self.emojiItem = [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeRight
                                      Image:[UIImage imageNamed:@"kl_emoji"]
                           highlightedImage:[UIImage imageNamed:@"kl_emoji_h"]
                                   callBack:^(KLKeyboardBarItem * _Nonnull item) {
-        NSLogDebug(@"表情");
+        
+        weakself.emojiItem.seq = weakself.emojiItem.seq == 0 ? 1 : 0;
+        if (weakself.emojiItem.seq == 1) {
+            [weakself.emojiKeyboard showKeyboardInView:weakself.view animated:YES];
+            [weakself.keyboardbar inputViewResignTextFirstResponder];
+            NSLogDebug(@"表情");
+        } else {
+            [weakself.keyboardbar inputViewBecomeFirstResponder];
+            [weakself.emojiKeyboard hideKeyboardAnimated:YES];
+            NSLogDebug(@"键盘");
+        }
+        
+        // 还原录音按钮状态
+        weakself.voiceItem.seq = 0;
+        weakself.moreItem.tag = 0;
+        // 隐藏录音视图
+        [weakself.keyboardbar hiddenRecordItem:YES  cacheText:NO];
     }];
+    [self.emojiItem setImage:[UIImage imageNamed:@"kl_keboard"] highlightedImage:[UIImage imageNamed:@"kl_keboard_h"] forSeq:1];
     
     // MARK: 更多功能键盘调用
-    [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeRight
+    self.funcKeyboard = KLFuncKeyboard.new;
+    self.moreItem = [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeRight
                                      Image:[UIImage imageNamed:@"kl_more"]
                           highlightedImage:[UIImage imageNamed:@"kl_more_h"]
                                   callBack:^(KLKeyboardBarItem * _Nonnull item) {
-        NSLogDebug(@"更多");
+        
+        weakself.moreItem.tag = weakself.moreItem.tag == 0 ? 1 : 0;
+        if (weakself.moreItem.tag == 1) {
+            [weakself.funcKeyboard showKeyboardInView:weakself.view animated:YES];
+            [weakself.keyboardbar inputViewResignTextFirstResponder];
+            NSLogDebug(@"展示更多");
+        } else {
+            [weakself.keyboardbar inputViewBecomeFirstResponder];
+            [weakself.funcKeyboard hideKeyboardAnimated:YES];
+            NSLogDebug(@"隐藏更多");
+        }
+        
+        // 还原表情按钮状态
+        weakself.emojiItem.seq = 0;
+        // 还原录音按钮状态
+        weakself.voiceItem.seq = 0;
+        // 隐藏录音视图
+        [weakself.keyboardbar hiddenRecordItem:YES cacheText:NO];
     }];
     
     // MARK: 发送消息回调
@@ -93,10 +147,12 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    // 重置为原始样式
     [self.view endEditing:YES];
-    
-//    KLViewController *vc = KLViewController.new;
-//    [self.navigationController pushViewController:vc animated:YES];
+    self.emojiItem.seq = 0;
+    self.moreItem.tag = 0;
+    [self.emojiKeyboard hideKeyboardAnimated:YES];
+    [self.funcKeyboard hideKeyboardAnimated:YES];
 }
 
 @end

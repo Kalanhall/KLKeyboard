@@ -12,6 +12,7 @@
 
 #import "KLBaseKeyboard.h"
 #import "KLEmojiKeyboard.h"
+#import "KLFuncKeyboard.h"
 #import "KLKeyboardBar.h"
 #import "KLKeyboardBarItem.h"
 

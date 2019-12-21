@@ -6,6 +6,7 @@
 //
 
 #import "KLKeyboardBar.h"
+#import "KLBaseKeyboard.h"
 @import Masonry;
 @import KLCategory;
 
@@ -17,8 +18,10 @@
 @property (strong, nonatomic) UIStackView *leftStack;
 @property (strong, nonatomic) UIStackView *rightStack;
 @property (strong, nonatomic) UITextView *textView;
+@property (strong, nonatomic) UIView *topline;
 @property (strong, nonatomic) KLKeyboardRecordItem *recordItem;
-@property (copy, nonatomic) NSString *currentText;
+@property (copy  , nonatomic) NSString *currentText;
+@property (assign, nonatomic) BOOL systemKeyboardShow;
 
 @end
 
@@ -30,6 +33,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor kl_colorWithRGBA:250.0, 250.0, 250.0, 1.0, nil];
+        
+        self.topline = UIView.alloc.init;
+        self.topline.backgroundColor = KLColor(0xE2E2E2);
+        [self addSubview:self.topline];
+        [self.topline mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.mas_equalTo(0);
+            make.height.mas_equalTo(0.5);
+        }];
         
         self.leftStack = UIStackView.alloc.init;
         self.leftStack.spacing = 0;
@@ -77,10 +88,10 @@
         self.recordItem.alpha = 0;
         
         // 系统键盘通知监听
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardFrameWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(systemKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(systemKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:KLKeyboardWillShowNotification object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:KLKeyboardWillHideNotification object:nil];
     }
     return self;
 }
@@ -90,28 +101,39 @@
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {} // 重写，阻挡传递到控制器的touchbegin方法中
+// 重写，阻挡传递到控制器的touchbegin方法中
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {}
 
-// MARK: - UIKeyboardNotification
-- (void)keyboardWillShow:(NSNotification *)notification
+// MARK: - KeyboardNotification
+- (void)systemKeyboardWillShow:(NSNotification *)notification
 {
-    
+    [NSNotificationCenter.defaultCenter postNotificationName:KLKeyboardWillShowNotification object:self];
+    self.systemKeyboardShow = YES;
+    CGRect frame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    self.transform = CGAffineTransformMakeTranslation(0, -frame.size.height + KLAutoBottomInset());
 }
 
-- (void)keyboardDidShow:(NSNotification *)notification
+- (void)systemKeyboardWillHide:(NSNotification *)notification
 {
-    
+    if (self.systemKeyboardShow == NO) return;
+    self.transform = CGAffineTransformIdentity;
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    self.systemKeyboardShow = NO;
+    UIView *showView = notification.object;
+    [UIView animateWithDuration:KLAnimationTime animations:^{
+        self.transform = CGAffineTransformMakeTranslation(0, -showView.kl_height + KLAutoBottomInset());
+    }];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-    self.transform = CGAffineTransformIdentity;
-}
-
-- (void)keyboardFrameWillChange:(NSNotification *)notification
-{
-    CGRect frame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    self.transform = CGAffineTransformMakeTranslation(0, -frame.size.height);
+    if (self.systemKeyboardShow == YES) return;
+    [UIView animateWithDuration:KLAnimationTime animations:^{
+        self.transform = CGAffineTransformIdentity;
+    }];
 }
 
 // MARK: - Private
@@ -175,9 +197,7 @@
                 [self.textView mas_updateConstraints:^(MASConstraintMaker *make) {
                     make.height.mas_equalTo(height);
                 }];
-                if (self.superview) {
-                    [self.superview layoutIfNeeded];
-                }
+                [self.superview layoutIfNeeded];
             } completion:^(BOOL finished) {
                 if (textHeight > height) {
                     [self.textView setContentOffset:CGPointMake(0, textHeight - height) animated:YES];
@@ -187,9 +207,7 @@
             [self.textView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.height.mas_equalTo(height);
             }];
-            if (self.superview) {
-                [self.superview layoutIfNeeded];
-            }
+            [self.superview layoutIfNeeded];
             if (textHeight > height) {
                 [self.textView setContentOffset:CGPointMake(0, textHeight - height) animated:YES];
             }
@@ -225,19 +243,24 @@
     [self.textView resignFirstResponder];
 }
 
-- (void)hiddenRecordItem:(BOOL)hidden
+- (void)hiddenRecordItem:(BOOL)hidden cacheText:(BOOL)cache
 {
     [UIView animateWithDuration:0.15 animations:^{ self.recordItem.alpha = hidden ? 0 : 1; }];
     
-    if (hidden) {
-        // 显示文本
-        self.textView.text = self.currentText;
-        self.currentText = nil;
+    if (cache) {
+        if (hidden) {
+            // 显示文本
+            self.textView.text = self.currentText;
+            self.currentText = nil;
+        } else {
+            // 隐藏文本
+            self.currentText = self.textView.text;
+            self.textView.text = nil;
+        }
     } else {
-        // 隐藏文本
-        self.currentText = self.textView.text;
-        self.textView.text = nil;
+        if (self.currentText.length) self.textView.text = self.currentText;
     }
+    
     [self reloadTextViewWithAnimation:YES];
 }
 
@@ -278,6 +301,13 @@
 - (void)textViewDidChange:(UITextView *)textView
 {
     [self reloadTextViewWithAnimation:YES];
+}
+
+// MARK: - Getter/Setter
+- (void)setToplineColor:(UIColor *)toplineColor
+{
+    _toplineColor = toplineColor;
+    self.topline.backgroundColor = toplineColor;
 }
 
 @end

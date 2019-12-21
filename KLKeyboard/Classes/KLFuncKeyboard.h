@@ -1,5 +1,5 @@
 //
-//  KLEmojiKeyboard.h
+//  KLFuncKeyboard.h
 //  KLKeyboard
 //
 //  Created by Kalan on 2019/12/21.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KLEmojiKeyboard : KLBaseKeyboard
+@interface KLFuncKeyboard : KLBaseKeyboard
 
 @end
 
