@@ -40,14 +40,14 @@ NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotificati
         [view addSubview:self];
         [self mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.mas_equalTo(0);
-            make.height.mas_equalTo(KLKEYBOARDHEIGHT);
+            make.height.mas_equalTo(self.kl_keyboardHeight);
         }];
     } else {
         [view bringSubviewToFront:self];
     }
     
     self.hidden = NO;
-    self.transform = CGAffineTransformMakeTranslation(0, KLKEYBOARDHEIGHT);
+    self.transform = CGAffineTransformMakeTranslation(0, self.kl_keyboardHeight);
     [UIView animateWithDuration:KLAnimationTime animations:^{
         self.transform = CGAffineTransformIdentity;
     }];
@@ -64,13 +64,21 @@ NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotificati
 - (void)hideKeyboardWithoutNotification:(BOOL)notification animated:(BOOL)animated
 {
     [UIView animateWithDuration:animated ? KLAnimationTime : 0 animations:^{
-        self.transform = CGAffineTransformMakeTranslation(0, KLKEYBOARDHEIGHT);
+        self.transform = CGAffineTransformMakeTranslation(0, self.kl_keyboardHeight);
     } completion:^(BOOL finished) {
         self.hidden = YES;
     }];
     if (notification) {
         [NSNotificationCenter.defaultCenter postNotificationName:KLKeyboardWillHideNotification object:nil];
     }
+}
+
+- (CGFloat)kl_keyboardHeight
+{
+    if (_kl_keyboardHeight == 0) {
+        return KLKEYBOARDHEIGHT;
+    }
+    return _kl_keyboardHeight;
 }
 
 @end
