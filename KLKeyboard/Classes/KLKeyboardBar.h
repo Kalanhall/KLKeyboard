@@ -16,6 +16,8 @@
 @property (strong, nonatomic, readonly) KLKeyboardRecordItem *recordItem;
 /// 发送消息回调
 @property (strong, nonatomic) void (^sendTextCompletion)(NSString *text);
+/// 是否在原位置
+@property (assign, nonatomic, readonly) BOOL kl_normalLocation;
 
 /// 添加输入框左右两边的功能按钮
 ///

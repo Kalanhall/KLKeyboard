@@ -14,7 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = UIColor.kl_randomColor;
+        
     }
     return self;
 }

@@ -6,6 +6,7 @@
 //
 
 #import "KLBaseKeyboard.h"
+#import "KLKeyboardBar.h"
 @import KLCategory;
 @import Masonry;
 
@@ -13,6 +14,13 @@ NSString * const KLKeyboardWillShowNotification = @"KLKeyboardWillShowNotificati
 NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotification";
 
 #define KLKEYBOARDHEIGHT 260 + KLAutoBottomInset()
+
+@interface KLBaseKeyboard ()
+
+@property (assign, nonatomic) BOOL kl_show;
+@property (strong, nonatomic) KLKeyboardBar *keyboardBar;
+
+@end
 
 @implementation KLBaseKeyboard
 
@@ -45,15 +53,16 @@ NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotificati
     } else {
         [view bringSubviewToFront:self];
     }
-    
+
     self.hidden = NO;
-    self.transform = CGAffineTransformMakeTranslation(0, self.kl_keyboardHeight);
+    self.transform = CGAffineTransformMakeTranslation(0, self.keyboardBar.kl_normalLocation ? self.kl_keyboardHeight : 50);
     [UIView animateWithDuration:KLAnimationTime animations:^{
         self.transform = CGAffineTransformIdentity;
     }];
     
     [self.superview layoutIfNeeded];
     [NSNotificationCenter.defaultCenter postNotificationName:KLKeyboardWillShowNotification object:self];
+    self.kl_show = YES;
 }
 
 - (void)hideKeyboardAnimated:(BOOL)animated
@@ -71,6 +80,12 @@ NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotificati
     if (notification) {
         [NSNotificationCenter.defaultCenter postNotificationName:KLKeyboardWillHideNotification object:nil];
     }
+    self.kl_show = NO;
+}
+
+- (void)bindingKeyboardBar:(KLKeyboardBar *)keyboardBar
+{
+    self.keyboardBar = keyboardBar;
 }
 
 - (CGFloat)kl_keyboardHeight
@@ -80,5 +95,7 @@ NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotificati
     }
     return _kl_keyboardHeight;
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {}
 
 @end

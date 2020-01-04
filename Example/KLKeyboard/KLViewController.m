@@ -13,6 +13,8 @@
 
 @interface KLViewController ()
 
+/// 聊天窗
+@property (strong, nonatomic) UITableView *chatView;
 /// 输入栏
 @property (strong, nonatomic) KLKeyboardBar *keyboardbar;
 /// 语音按钮
@@ -35,6 +37,10 @@
     [super viewDidLoad];
     self.title = @"表情键盘";
     self.view.backgroundColor = [UIColor kl_colorWithRGBA:250.0, 250.0, 250.0, 1.0, nil];
+    
+    // 设置背景图
+    UIImage *image = [UIImage imageNamed:@"bg"];
+    self.view.layer.contents = (id)image.CGImage;
     
     self.keyboardbar = KLKeyboardBar.new;
     [self.view addSubview:self.keyboardbar];
@@ -72,6 +78,7 @@
     
     //  MARK: 表情键盘调用
     self.emojiKeyboard = KLEmojiKeyboard.new;
+    [self.emojiKeyboard bindingKeyboardBar:self.keyboardbar];
     self.emojiItem = [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeRight
                                      Image:[UIImage imageNamed:@"kl_emoji"]
                           highlightedImage:[UIImage imageNamed:@"kl_emoji_h"]
@@ -98,6 +105,7 @@
     
     // MARK: 更多功能键盘调用
     self.funcKeyboard = KLFuncKeyboard.new;
+    [self.funcKeyboard bindingKeyboardBar:self.keyboardbar];
     self.moreItem = [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeRight
                                      Image:[UIImage imageNamed:@"kl_more"]
                           highlightedImage:[UIImage imageNamed:@"kl_more_h"]

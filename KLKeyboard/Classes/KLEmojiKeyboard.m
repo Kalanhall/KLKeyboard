@@ -14,7 +14,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = UIColor.kl_randomColor;
         self.kl_keyboardHeight = 300;
     }
     return self;

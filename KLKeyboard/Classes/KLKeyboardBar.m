@@ -22,6 +22,7 @@
 @property (strong, nonatomic) KLKeyboardRecordItem *recordItem;
 @property (copy  , nonatomic) NSString *currentText;
 @property (assign, nonatomic) BOOL systemKeyboardShow;
+@property (assign, nonatomic) BOOL kl_normalLocation;
 
 @end
 
@@ -32,7 +33,18 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor kl_colorWithRGBA:250.0, 250.0, 250.0, 1.0, nil];
+        self.backgroundColor = [UIColor kl_colorWithRGBA:250.0, 250.0, 250.0, 0.8, nil];
+        self.kl_normalLocation = YES;
+        
+        // 键盘下方蒙版层
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+        UIVisualEffectView *effectView = [UIVisualEffectView.alloc initWithEffect:effect];
+        [self addSubview:effectView];
+        [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.mas_equalTo(0);
+            make.top.mas_equalTo(self.mas_bottom);
+            make.height.mas_equalTo(UIScreen.mainScreen.bounds.size.height);
+        }];
         
         self.topline = UIView.alloc.init;
         self.topline.backgroundColor = KLColor(0xE2E2E2);
@@ -80,7 +92,7 @@
         [self.recordItem setTitle:@"松开 结束" forState:UIControlStateHighlighted];
         [self.recordItem setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.recordItem setBackgroundImage:KLImageColor(UIColor.whiteColor) forState:UIControlStateNormal];
-        [self.recordItem setBackgroundImage:KLImageHex(0xE5E5E5) forState:UIControlStateHighlighted];
+        [self.recordItem setBackgroundImage:KLImageColor(UIColor.clearColor) forState:UIControlStateHighlighted];
         self.recordItem.titleLabel.font = KLAutoFont(14.0);
         [self addSubview:self.recordItem];
         
@@ -111,12 +123,14 @@
     self.systemKeyboardShow = YES;
     CGRect frame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     self.transform = CGAffineTransformMakeTranslation(0, -frame.size.height + KLAutoBottomInset());
+    self.kl_normalLocation = NO;
 }
 
 - (void)systemKeyboardWillHide:(NSNotification *)notification
 {
     if (self.systemKeyboardShow == NO) return;
     self.transform = CGAffineTransformIdentity;
+    self.kl_normalLocation = YES;
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification
@@ -126,6 +140,7 @@
     [UIView animateWithDuration:KLAnimationTime animations:^{
         self.transform = CGAffineTransformMakeTranslation(0, -showView.kl_height + KLAutoBottomInset());
     }];
+    self.kl_normalLocation = NO;
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
@@ -134,6 +149,7 @@
     [UIView animateWithDuration:KLAnimationTime animations:^{
         self.transform = CGAffineTransformIdentity;
     }];
+    self.kl_normalLocation = YES;
 }
 
 // MARK: - Private
@@ -245,7 +261,16 @@
 
 - (void)hiddenRecordItem:(BOOL)hidden cacheText:(BOOL)cache
 {
-    [UIView animateWithDuration:0.15 animations:^{ self.recordItem.alpha = hidden ? 0 : 1; }];
+    // 提前显示
+    if (hidden) self.textView.backgroundColor = UIColor.whiteColor;
+    [UIView animateWithDuration:0.15 animations:^{
+        self.recordItem.alpha = hidden ? 0 : 1;
+    } completion:^(BOOL finished) {
+        // 滞后显示
+        if (!hidden) {
+            self.textView.backgroundColor = UIColor.clearColor;
+        }
+    }];
     
     if (cache) {
         if (hidden) {
