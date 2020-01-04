@@ -7,11 +7,12 @@
 //
 
 #import "KLViewController.h"
+#import "KLChatLeftCell.h"
 @import KLKeyboard;
 @import Masonry;
 @import KLCategory;
 
-@interface KLViewController ()
+@interface KLViewController () <UITableViewDelegate, UITableViewDataSource>
 
 /// 聊天窗
 @property (strong, nonatomic) UITableView *chatView;
@@ -42,11 +43,26 @@
     UIImage *image = [UIImage imageNamed:@"bg"];
     self.view.layer.contents = (id)image.CGImage;
     
-    self.keyboardbar = KLKeyboardBar.new;
+    self.keyboardbar = KLKeyboardBar.alloc.init;
     [self.view addSubview:self.keyboardbar];
     [self.keyboardbar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0); // 高度自增长，不需要设定
     }];
+    
+    self.chatView = [UITableView.alloc initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    self.chatView.backgroundColor = UIColor.clearColor;
+    self.chatView.delegate = self;
+    self.chatView.dataSource = self;
+    self.chatView.estimatedRowHeight = 50;
+    self.chatView.estimatedSectionHeaderHeight = 0;
+    self.chatView.estimatedSectionFooterHeight = 0;
+    self.chatView.rowHeight = UITableViewAutomaticDimension;
+    [self.view insertSubview:self.chatView belowSubview:self.keyboardbar];
+    [self.chatView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.mas_equalTo(0);
+        make.bottom.mas_equalTo(self.keyboardbar.mas_top);
+    }];
+    [self.chatView registerClass:KLChatLeftCell.class forCellReuseIdentifier:KLChatLeftCell.description];
     
     // MARK: 通过枚举KLKeyboardBarItemSeq完成按钮2种模式下的切换
     __weak typeof(self) weakself = self;
@@ -153,7 +169,7 @@
     };
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (void)resetKeyboard
 {
     // 重置为原始样式
     [self.view endEditing:YES];
@@ -161,6 +177,46 @@
     self.moreItem.tag = 0;
     [self.emojiKeyboard hideKeyboardAnimated:YES];
     [self.funcKeyboard hideKeyboardAnimated:YES];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 19;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    KLChatLeftCell *cell = [tableView dequeueReusableCellWithIdentifier:KLChatLeftCell.description];
+    [cell kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
+        [self resetKeyboard];
+    }];
+    
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return UIView.new;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.01;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return UIView.new;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self resetKeyboard];
 }
 
 @end
