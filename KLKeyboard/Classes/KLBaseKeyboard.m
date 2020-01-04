@@ -74,13 +74,8 @@ NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotificati
 
 - (void)hideKeyboardWithoutNotification:(BOOL)notification animated:(BOOL)animated
 {
-    self.alpha = 0;
-    [UIView animateWithDuration:animated ? KLAnimationTime : 0 animations:^{
-        self.alpha = 1;
-        self.transform = CGAffineTransformMakeTranslation(0, self.kl_keyboardHeight);
-    } completion:^(BOOL finished) {
-        self.hidden = YES;
-    }];
+    self.hidden = YES;
+    self.transform = CGAffineTransformMakeTranslation(0, self.kl_keyboardHeight);
     if (notification) {
         [NSNotificationCenter.defaultCenter postNotificationName:KLKeyboardWillHideNotification object:nil];
     }
