@@ -125,6 +125,7 @@
         KLEmojiPackageCell *cell2 = (KLEmojiPackageCell *)[collectionView cellForItemAtIndexPath:indexPath];
         cell2.item.selected = YES;
         self.currentIndex = indexPath;
+        [collectionView reloadData];
     }
 }
 
