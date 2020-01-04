@@ -56,7 +56,7 @@ NSString * const KLKeyboardWillHideNotification = @"KLKeyboardWillHideNotificati
 
     self.hidden = NO;
     self.alpha = 0;
-    self.transform = CGAffineTransformMakeTranslation(0, self.keyboardBar.kl_normalLocation ? self.kl_keyboardHeight : self.kl_keyboardHeight * 0.5);
+    self.transform = CGAffineTransformMakeTranslation(0, self.keyboardBar.kl_normalLocation ? self.kl_keyboardHeight : self.kl_keyboardHeight * 0.3);
     [UIView animateWithDuration:KLAnimationTime animations:^{
         self.alpha = 1;
         self.transform = CGAffineTransformIdentity;
