@@ -290,6 +290,14 @@
 }
 
 // MARK: - UITextViewDelegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    if (self.textViewShouldBeginEditing) {
+        self.textViewShouldBeginEditing();
+    }
+    return YES;
+}
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     if ([text isEqualToString:@"\n"]) {

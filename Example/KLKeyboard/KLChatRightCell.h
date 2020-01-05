@@ -1,8 +1,8 @@
 //
-//  KLChatLeftCell.h
+//  KLChatRightCell.h
 //  KLKeyboard_Example
 //
-//  Created by Logic on 2020/1/4.
+//  Created by Logic on 2020/1/5.
 //  Copyright © 2020 Kalanhall@163.com. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KLChatLeftCell : UITableViewCell
+@interface KLChatRightCell : UITableViewCell
 
 @property (strong, nonatomic) UIImageView *userIcon;
 @property (strong, nonatomic) UILabel *userName;

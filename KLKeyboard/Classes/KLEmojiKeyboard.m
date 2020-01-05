@@ -40,6 +40,7 @@
 @interface KLEmojiKeyboard () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
+@property (strong, nonatomic) UIScrollView *packageItemView;
 @property (strong, nonatomic) NSIndexPath *currentIndex;
 
 @end
@@ -67,13 +68,30 @@
             make.height.mas_equalTo(self.collectionView.mas_width).multipliedBy(1/7.5);
         }];
         [self.collectionView registerClass:KLEmojiPackageCell.class forCellWithReuseIdentifier:KLEmojiPackageCell.description];
+        
+        self.packageItemView = UIScrollView.alloc.init;
+        self.packageItemView.backgroundColor = KLColor(0xF2F2F2);
+        [self addSubview:self.packageItemView];
+        [self.packageItemView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.bottom.right.mas_equalTo(0);
+            make.top.mas_equalTo(self.collectionView.mas_bottom);
+        }];
+        
+        UIView *line = UIView.alloc.init;
+        line.backgroundColor = KLColor(0xE2E2E2);
+        [self addSubview:line];
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.mas_equalTo(0);
+            make.height.mas_equalTo(0.5);
+            make.top.mas_equalTo(self.collectionView.mas_bottom);
+        }];
     }
     return self;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 15;
+    return 8;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -82,6 +100,8 @@
     [cell.item setImage:[UIImage imageNamed:@"kl_emoji"] forState:UIControlStateNormal];
     if (self.currentIndex) {
         cell.item.selected = indexPath.row == self.currentIndex.row;
+    } else {
+        cell.item.selected = indexPath.row == 2;
     }
     
     return cell;
@@ -96,29 +116,34 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
-    if (indexPath.row < 5) {
+    if (indexPath.row < 2) {
         // 固定功能
         switch (indexPath.row) {
             case 0:
                 NSLog(@"设置");
                 break;
-            case 1:
-                NSLog(@"添加");
-                break;
-
-            case 2:
-                NSLog(@"emoji");
-                break;
-
-            case 3:
-                NSLog(@"收藏");
-                break;
-                   
             default:
-                NSLog(@"自拍");
+                NSLog(@"添加");
                 break;
         }
     } else {
+        // 固定功能
+        switch (indexPath.row) {
+            case 2:
+                NSLog(@"emoji");
+                break;
+            case 3:
+                NSLog(@"收藏");
+                break;
+            case 4:
+                NSLog(@"自拍");
+                break;
+                
+            default:
+                NSLog(@"表情包 - %@", @(indexPath.row - 5));
+                break;
+        }
+        
         // 选择表情包
         KLEmojiPackageCell *cell1 = (KLEmojiPackageCell *)[collectionView cellForItemAtIndexPath:self.currentIndex];
         cell1.item.selected = NO;

@@ -8,6 +8,7 @@
 
 #import "KLViewController.h"
 #import "KLChatLeftCell.h"
+#import "KLChatRightCell.h"
 @import KLKeyboard;
 @import Masonry;
 @import KLCategory;
@@ -49,6 +50,8 @@
         make.left.bottom.right.mas_equalTo(0); // 高度自增长，不需要设定
     }];
     
+    [self.keyboardbar addObserver:self forKeyPath:@"transform" options:NSKeyValueObservingOptionNew context:nil];
+    
     self.chatView = [UITableView.alloc initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.chatView.backgroundColor = UIColor.clearColor;
     self.chatView.delegate = self;
@@ -57,15 +60,24 @@
     self.chatView.estimatedSectionHeaderHeight = 0;
     self.chatView.estimatedSectionFooterHeight = 0;
     self.chatView.rowHeight = UITableViewAutomaticDimension;
+    self.chatView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.chatView.showsVerticalScrollIndicator = NO;
     [self.view insertSubview:self.chatView belowSubview:self.keyboardbar];
     [self.chatView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
         make.bottom.mas_equalTo(self.keyboardbar.mas_top);
     }];
     [self.chatView registerClass:KLChatLeftCell.class forCellReuseIdentifier:KLChatLeftCell.description];
+    [self.chatView registerClass:KLChatRightCell.class forCellReuseIdentifier:KLChatRightCell.description];
+    
+    __weak typeof(self) weakself = self;
+    
+    self.keyboardbar.textViewShouldBeginEditing = ^{
+        weakself.emojiItem.seq = 0;
+        weakself.moreItem.tag = 0;
+    };
     
     // MARK: 通过枚举KLKeyboardBarItemSeq完成按钮2种模式下的切换
-    __weak typeof(self) weakself = self;
     self.voiceItem = [self.keyboardbar addKeyboardItemWithType:KLKeyboardBarItemTypeLeft
                                                                   Image:[UIImage imageNamed:@"kl_voice"]
                                                        highlightedImage:[UIImage imageNamed:@"kl_voice_h"]
@@ -139,9 +151,8 @@
         }
         
         // 还原表情按钮状态
-        weakself.emojiItem.seq = 0;
-        // 还原录音按钮状态
         weakself.voiceItem.seq = 0;
+        weakself.emojiItem.seq = 0;
         // 隐藏录音视图
         [weakself.keyboardbar hiddenRecordItem:YES cacheText:NO];
     }];
@@ -169,6 +180,20 @@
     };
 }
 
+- (void)dealloc
+{
+    [self removeObserver:self.keyboardbar forKeyPath:@"transform"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"transform"]) {
+        id temp = change[@"new"];
+        CGAffineTransform transform = [temp CGAffineTransformValue];
+        self.chatView.transform = CGAffineTransformMakeTranslation(0, transform.ty);
+    }
+}
+
 - (void)resetKeyboard
 {
     // 重置为原始样式
@@ -179,6 +204,7 @@
     [self.funcKeyboard hideKeyboardAnimated:YES];
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 19;
@@ -186,12 +212,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    KLChatLeftCell *cell = [tableView dequeueReusableCellWithIdentifier:KLChatLeftCell.description];
-    [cell kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
-        [self resetKeyboard];
-    }];
-    
-    return cell;
+    if (indexPath.row % 2 == 0) {
+        KLChatLeftCell *cell = [tableView dequeueReusableCellWithIdentifier:KLChatLeftCell.description];
+        cell.userName.text = [NSString stringWithFormat:@"Somebody - %@", @(indexPath.row)];
+        cell.userIcon.image = [UIImage imageNamed:@"kl_emoji"];
+        [cell kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
+            [self resetKeyboard];
+        }];
+        return cell;
+    } else {
+        KLChatRightCell *cell = [tableView dequeueReusableCellWithIdentifier:KLChatRightCell.description];
+        cell.userName.text = [NSString stringWithFormat:@"Somebody - %@", @(indexPath.row)];
+        cell.userIcon.image = [UIImage imageNamed:@"kl_emoji_h"];
+        [cell kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
+            [self resetKeyboard];
+        }];
+        return cell;
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

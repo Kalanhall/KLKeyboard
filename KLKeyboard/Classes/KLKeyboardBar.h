@@ -14,6 +14,8 @@
 @property (strong, nonatomic) UIColor *toplineColor;
 /// 录音按钮，实现录音业务的各种回调
 @property (strong, nonatomic, readonly) KLKeyboardRecordItem *recordItem;
+/// 开始编辑消息回调
+@property (strong, nonatomic) void (^textViewShouldBeginEditing)(void);
 /// 发送消息回调
 @property (strong, nonatomic) void (^sendTextCompletion)(NSString *text);
 /// 是否在原位置

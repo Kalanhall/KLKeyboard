@@ -25,6 +25,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A3A7EB2EC38DCDEEE2CA5C2B /* Pods_KLKeyboard_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EE5A1712C74AD4ABDD3CFB /* Pods_KLKeyboard_Tests.framework */; };
 		F6123D3D23C041FF00DD55FC /* KLChatLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6123D3C23C041FF00DD55FC /* KLChatLeftCell.m */; };
+		F6123F1623C179FB00DD55FC /* KLChatRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6123F1523C179FB00DD55FC /* KLChatRightCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		DA761609FCEED1221D9A4957 /* Pods-KLKeyboard_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLKeyboard_Tests.release.xcconfig"; path = "Target Support Files/Pods-KLKeyboard_Tests/Pods-KLKeyboard_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F6123D3B23C041FF00DD55FC /* KLChatLeftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLChatLeftCell.h; sourceTree = "<group>"; };
 		F6123D3C23C041FF00DD55FC /* KLChatLeftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLChatLeftCell.m; sourceTree = "<group>"; };
+		F6123F1423C179FB00DD55FC /* KLChatRightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLChatRightCell.h; sourceTree = "<group>"; };
+		F6123F1523C179FB00DD55FC /* KLChatRightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLChatRightCell.m; sourceTree = "<group>"; };
 		FDC97EFC9DDCCEF3331D929A /* Pods-KLKeyboard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLKeyboard_Example.release.xcconfig"; path = "Target Support Files/Pods-KLKeyboard_Example/Pods-KLKeyboard_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,11 +143,13 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* KLViewController.h */,
 				6003F5A6195388D20070C39A /* KLViewController.m */,
+				F6123F1423C179FB00DD55FC /* KLChatRightCell.h */,
+				F6123F1523C179FB00DD55FC /* KLChatRightCell.m */,
+				F6123D3B23C041FF00DD55FC /* KLChatLeftCell.h */,
+				F6123D3C23C041FF00DD55FC /* KLChatLeftCell.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				F6123D3B23C041FF00DD55FC /* KLChatLeftCell.h */,
-				F6123D3C23C041FF00DD55FC /* KLChatLeftCell.m */,
 			);
 			name = "Example for KLKeyboard";
 			path = KLKeyboard;
@@ -380,6 +385,7 @@
 				F6123D3D23C041FF00DD55FC /* KLChatLeftCell.m in Sources */,
 				6003F5A7195388D20070C39A /* KLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				F6123F1623C179FB00DD55FC /* KLChatRightCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
