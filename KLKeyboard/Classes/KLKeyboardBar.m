@@ -33,7 +33,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor kl_colorWithRGBA:250.0, 250.0, 250.0, 0.8, nil];
         self.kl_normalLocation = YES;
         
         // 键盘下方蒙版层
@@ -41,8 +40,7 @@
         UIVisualEffectView *effectView = [UIVisualEffectView.alloc initWithEffect:effect];
         [self addSubview:effectView];
         [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.mas_equalTo(0);
-            make.top.mas_equalTo(self.mas_bottom);
+            make.left.right.top.mas_equalTo(0);
             make.height.mas_equalTo(UIScreen.mainScreen.bounds.size.height);
         }];
         
